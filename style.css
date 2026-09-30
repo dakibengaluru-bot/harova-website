@@ -87,13 +87,17 @@ button {
 .brand {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .brand img {
-    width: 150px;
-    height: 62px;
+    width: 170px;
+    height: 72px;
     object-fit: contain;
-    border-radius: 5px;
+    display: block;
+    background: transparent;
+    border: none;
+    border-radius: 0;
 }
 
 .navigation {

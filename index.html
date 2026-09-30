@@ -4,64 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Harova | Premium Peanut Butter</title>
+    <title>Harova | The Pursuit of Wellbeing</title>
+
+    <meta name="description"
+          content="Harova premium peanut butter made with natural ingredients, authentic flavours and honest craftsmanship.">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
-    <header class="site-header">
-        <div class="header-inner">
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
-            <a href="#home" class="brand">
-                <img src="Harova_Logo.jpeg" alt="Harova Logo">
-            </a>
+<header class="site-header">
 
-            <nav class="navigation">
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#products">Products</a>
-                <a href="#benefits">Benefits</a>
-                <a href="#contact">Contact</a>
-            </nav>
+    <div class="header-inner">
 
-            <a href="#products" class="shop-button">
-                🛒 Shop Now
-            </a>
+        <a href="#home" class="brand">
+            <img src="Harova_Logo.jpeg" alt="Harova">
+        </a>
 
-        </div>
-    </header>
+        <nav class="navigation">
+
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#benefits">Benefits</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+        <a href="#products" class="shop-button">
+            Shop Now
+        </a>
+
+        <button class="menu-button" onclick="toggleMenu()" aria-label="Open menu">
+            ☰
+        </button>
+
+    </div>
+
+</header>
 
 
-    <!-- ================= HERO ================= -->
-    <section id="home" class="hero">
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-inner">
 
         <div class="hero-content">
 
-            <p class="hero-small">
-                WHOLESOME TASTES BETTER
+            <div class="hero-logo-mark">
+                <img src="Harova_Logo.jpeg" alt="Harova Logo">
+            </div>
+
+            <p class="hero-tagline">
+                THE PURSUIT OF WELLBEING
             </p>
 
+            <div class="gold-line"></div>
+
             <h1>
-                Goodness<br>
-                in Every Jar
+                Pure Goodness.<br>
+                <span>Richly Crafted.</span>
             </h1>
 
             <p class="hero-description">
-                Premium peanut butter made with carefully selected
-                peanuts and wholesome ingredients.
+                From authentic foods to new creations, Harova is driven by
+                natural ingredients, honest craftsmanship, and a vision
+                for a better future.
             </p>
 
             <div class="hero-buttons">
 
-                <a href="#products" class="primary-button">
-                    Explore Products
+                <a href="#products" class="gold-button">
+                    Explore Our Range
                 </a>
 
                 <a href="https://wa.me/918147408642"
-                   class="secondary-button">
+                   target="_blank"
+                   class="outline-button">
                     Order on WhatsApp
                 </a>
 
@@ -69,287 +98,466 @@
 
         </div>
 
-    </section>
 
+        <div class="hero-product">
 
-    <!-- ================= ABOUT ================= -->
-    <section id="about" class="about-section">
+            <div class="hero-product-frame">
 
-        <div class="section-heading">
+                <div class="frame-corner top-left"></div>
+                <div class="frame-corner top-right"></div>
+                <div class="frame-corner bottom-left"></div>
+                <div class="frame-corner bottom-right"></div>
 
-            <p class="section-label">
-                ABOUT HAROVA
+                <img src="harova_hero_jar.jpeg"
+                     alt="Harova Premium Peanut Butter">
+
+            </div>
+
+            <p class="hero-product-caption">
+                PREMIUM PEANUT BUTTER
             </p>
 
-            <h2>
-                Pure Nutrition for a Better You
-            </h2>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     BRAND VALUES
+========================================================= -->
+
+<section class="values-section">
+
+    <div class="section-container">
+
+        <div class="value-item">
+
+            <div class="value-icon">✦</div>
+
+            <h3>Natural Ingredients</h3>
+
+            <p>
+                Carefully selected ingredients
+                for authentic taste.
+            </p>
+
+        </div>
+
+
+        <div class="value-divider"></div>
+
+
+        <div class="value-item">
+
+            <div class="value-icon">◇</div>
+
+            <h3>No Preservatives</h3>
+
+            <p>
+                Honest food made with
+                thoughtful simplicity.
+            </p>
+
+        </div>
+
+
+        <div class="value-divider"></div>
+
+
+        <div class="value-item">
+
+            <div class="value-icon">♡</div>
+
+            <h3>Better Choices</h3>
+
+            <p>
+                Delicious products for
+                everyday wellbeing.
+            </p>
+
+        </div>
+
+
+        <div class="value-divider"></div>
+
+
+        <div class="value-item">
+
+            <div class="value-icon">❖</div>
+
+            <h3>A Healthier Future</h3>
+
+            <p>
+                Creating food with
+                tomorrow in mind.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section id="about" class="about-section">
+
+    <div class="section-container about-grid">
+
+        <div class="about-image">
+
+            <div class="image-frame">
+
+                <img src="harova_hero_jar.jpeg"
+                     alt="Harova Peanut Butter">
+
+            </div>
 
         </div>
 
 
         <div class="about-content">
 
-            <div class="about-text">
-
-                <h3>
-                    Wholesome. Delicious. Natural.
-                </h3>
-
-                <p>
-                    Harova Peanut Butter is made for people who want
-                    delicious taste without compromising on quality.
-                </p>
-
-                <p>
-                    Our peanut butter is crafted using carefully selected
-                    peanuts to give you a rich, creamy and satisfying
-                    experience in every spoonful.
-                </p>
-
-                <p>
-                    From classic creamy peanut butter to delicious
-                    chocolate combinations, Harova brings wholesome
-                    goodness to your everyday meals.
-                </p>
-
-            </div>
-
-
-            <div class="about-highlight">
-
-                <div class="highlight-item">
-                    <span>🌿</span>
-                    <h3>100% Natural</h3>
-                    <p>Wholesome ingredients</p>
-                </div>
-
-                <div class="highlight-item">
-                    <span>🍯</span>
-                    <h3>Honey Sweetened</h3>
-                    <p>Delicious natural sweetness</p>
-                </div>
-
-                <div class="highlight-item">
-                    <span>🧪</span>
-                    <h3>No Chemicals</h3>
-                    <p>No preservatives</p>
-                </div>
-
-                <div class="highlight-item">
-                    <span>🥜</span>
-                    <h3>Rich & Creamy</h3>
-                    <p>Premium peanut goodness</p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= PRODUCTS ================= -->
-    <section id="products" class="products-section">
-
-        <div class="section-heading">
-
             <p class="section-label">
-                OUR PRODUCTS
+                THE HAROVA STORY
             </p>
 
+            <div class="gold-line left"></div>
+
             <h2>
-                Choose Your Favourite
+                Crafted with purpose.<br>
+                <span>Made for wellbeing.</span>
             </h2>
 
             <p>
-                Available in 200g, 500g and 1kg jars.
+                Harova was created with a simple belief —
+                wholesome food should never compromise on taste.
             </p>
+
+            <p>
+                We carefully select quality ingredients and
+                transform them into delicious products with
+                honest craftsmanship.
+            </p>
+
+            <p>
+                Our peanut butter range brings together rich,
+                satisfying flavours and the goodness of carefully
+                chosen ingredients.
+            </p>
+
+            <a href="#products" class="text-button">
+                Discover Harova
+                <span>→</span>
+            </a>
 
         </div>
 
+    </div>
 
-        <div class="product-grid">
+</section>
 
 
-            <!-- ================= CREAMY ================= -->
-            <div class="product-card">
+<!-- =========================================================
+     PRODUCTS
+========================================================= -->
 
-                <div class="product-image">
-                    <img src="creamy_jar.png"
-                         alt="Harova Creamy Peanut Butter">
-                </div>
+<section id="products" class="products-section">
 
-                <h3>
-                    Creamy
-                </h3>
+    <div class="section-heading">
+
+        <p class="section-label">
+            OUR PEANUT BUTTER RANGE
+        </p>
+
+        <div class="gold-line"></div>
+
+        <h2>
+            Rich Flavours.<br>
+            <span>Beautifully Crafted.</span>
+        </h2>
+
+        <p>
+            Discover our premium range of creamy, crunchy
+            and chocolate peanut butter.
+        </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <!-- CREAMY -->
+
+        <article class="product-card">
+
+            <div class="product-image">
+
+                <img src="creamy_jar.png"
+                     alt="Harova Creamy Peanut Butter">
+
+            </div>
+
+            <div class="product-content">
+
+                <p class="product-number">01</p>
+
+                <h3>Creamy</h3>
 
                 <p class="product-description">
-                    Smooth & Classic
+                    Smooth &amp; Classic
                 </p>
 
-                <div class="price-list">
+                <div class="product-divider"></div>
 
-                    <div>
-                        <span>200g</span>
-                        <strong>₹149</strong>
-                    </div>
-
-                    <div>
-                        <span>500g</span>
-                        <strong>₹329</strong>
-                    </div>
-
-                    <div>
-                        <span>1kg</span>
-                        <strong>₹549</strong>
-                    </div>
-
+                <div class="price-row">
+                    <span>200g</span>
+                    <strong>₹149</strong>
                 </div>
 
-                <a href="https://wa.me/918147408642?text=Hi%20Harova%2C%20I%20would%20like%20to%20order%20Creamy%20Peanut%20Butter."
-                   class="order-button">
+                <div class="price-row">
+                    <span>500g</span>
+                    <strong>₹329</strong>
+                </div>
+
+                <div class="price-row">
+                    <span>1kg</span>
+                    <strong>₹549</strong>
+                </div>
+
+                <a href="https://wa.me/918147408642?text=Hello%20Harova%2C%20I%20would%20like%20to%20order%20Creamy%20Peanut%20Butter."
+                   target="_blank"
+                   class="product-button">
                     Order Now
                 </a>
 
             </div>
 
+        </article>
 
-            <!-- ================= CRUNCHY ================= -->
-            <div class="product-card">
 
-                <div class="product-image">
-                    <img src="crunchy_jar.png"
-                         alt="Harova Crunchy Peanut Butter">
-                </div>
+        <!-- CRUNCHY -->
 
-                <h3>
-                    Crunchy
-                </h3>
+        <article class="product-card">
+
+            <div class="product-image">
+
+                <img src="crunchy_jar.png"
+                     alt="Harova Crunchy Peanut Butter">
+
+            </div>
+
+            <div class="product-content">
+
+                <p class="product-number">02</p>
+
+                <h3>Crunchy</h3>
 
                 <p class="product-description">
                     With Real Peanut Bits
                 </p>
 
-                <div class="price-list">
+                <div class="product-divider"></div>
 
-                    <div>
-                        <span>200g</span>
-                        <strong>₹159</strong>
-                    </div>
-
-                    <div>
-                        <span>500g</span>
-                        <strong>₹349</strong>
-                    </div>
-
-                    <div>
-                        <span>1kg</span>
-                        <strong>₹569</strong>
-                    </div>
-
+                <div class="price-row">
+                    <span>200g</span>
+                    <strong>₹159</strong>
                 </div>
 
-                <a href="https://wa.me/918147408642?text=Hi%20Harova%2C%20I%20would%20like%20to%20order%20Crunchy%20Peanut%20Butter."
-                   class="order-button">
+                <div class="price-row">
+                    <span>500g</span>
+                    <strong>₹349</strong>
+                </div>
+
+                <div class="price-row">
+                    <span>1kg</span>
+                    <strong>₹569</strong>
+                </div>
+
+                <a href="https://wa.me/918147408642?text=Hello%20Harova%2C%20I%20would%20like%20to%20order%20Crunchy%20Peanut%20Butter."
+                   target="_blank"
+                   class="product-button">
                     Order Now
                 </a>
 
             </div>
 
+        </article>
 
-            <!-- ================= CHOCOLATE CREAMY ================= -->
-            <div class="product-card">
 
-                <div class="product-image">
-                    <img src="choc_creamy_jar.png"
-                         alt="Harova Chocolate Creamy Peanut Butter">
-                </div>
+        <!-- CHOCOLATE CREAMY -->
 
-                <h3>
-                    Chocolate Creamy
-                </h3>
+        <article class="product-card">
+
+            <div class="product-image">
+
+                <img src="choc_creamy_jar.png"
+                     alt="Harova Chocolate Creamy Peanut Butter">
+
+            </div>
+
+            <div class="product-content">
+
+                <p class="product-number">03</p>
+
+                <h3>Chocolate Creamy</h3>
 
                 <p class="product-description">
-                    Rich Cocoa & Smooth
+                    Rich Cocoa &amp; Smooth
                 </p>
 
-                <div class="price-list">
+                <div class="product-divider"></div>
 
-                    <div>
-                        <span>200g</span>
-                        <strong>₹169</strong>
-                    </div>
-
-                    <div>
-                        <span>500g</span>
-                        <strong>₹369</strong>
-                    </div>
-
-                    <div>
-                        <span>1kg</span>
-                        <strong>₹599</strong>
-                    </div>
-
+                <div class="price-row">
+                    <span>200g</span>
+                    <strong>₹169</strong>
                 </div>
 
-                <a href="https://wa.me/918147408642?text=Hi%20Harova%2C%20I%20would%20like%20to%20order%20Chocolate%20Creamy%20Peanut%20Butter."
-                   class="order-button">
+                <div class="price-row">
+                    <span>500g</span>
+                    <strong>₹369</strong>
+                </div>
+
+                <div class="price-row">
+                    <span>1kg</span>
+                    <strong>₹599</strong>
+                </div>
+
+                <a href="https://wa.me/918147408642?text=Hello%20Harova%2C%20I%20would%20like%20to%20order%20Chocolate%20Creamy%20Peanut%20Butter."
+                   target="_blank"
+                   class="product-button">
                     Order Now
                 </a>
 
             </div>
 
+        </article>
 
-            <!-- ================= CHOCOLATE CRUNCHY ================= -->
-            <div class="product-card">
 
-                <div class="product-image">
-                    <img src="choc_crunchy_jar.png"
-                         alt="Harova Chocolate Crunchy Peanut Butter">
-                </div>
+        <!-- CHOCOLATE CRUNCHY -->
 
-                <h3>
-                    Chocolate Crunchy
-                </h3>
+        <article class="product-card">
+
+            <div class="product-image">
+
+                <img src="choc_crunchy_jar.png"
+                     alt="Harova Chocolate Crunchy Peanut Butter">
+
+            </div>
+
+            <div class="product-content">
+
+                <p class="product-number">04</p>
+
+                <h3>Chocolate Crunchy</h3>
 
                 <p class="product-description">
                     Cocoa with Peanut Bits
                 </p>
 
-                <div class="price-list">
+                <div class="product-divider"></div>
 
-                    <div>
-                        <span>200g</span>
-                        <strong>₹179</strong>
-                    </div>
-
-                    <div>
-                        <span>500g</span>
-                        <strong>₹389</strong>
-                    </div>
-
-                    <div>
-                        <span>1kg</span>
-                        <strong>₹619</strong>
-                    </div>
-
+                <div class="price-row">
+                    <span>200g</span>
+                    <strong>₹179</strong>
                 </div>
 
-                <a href="https://wa.me/918147408642?text=Hi%20Harova%2C%20I%20would%20like%20to%20order%20Chocolate%20Crunchy%20Peanut%20Butter."
-                   class="order-button">
+                <div class="price-row">
+                    <span>500g</span>
+                    <strong>₹389</strong>
+                </div>
+
+                <div class="price-row">
+                    <span>1kg</span>
+                    <strong>₹619</strong>
+                </div>
+
+                <a href="https://wa.me/918147408642?text=Hello%20Harova%2C%20I%20would%20like%20to%20order%20Chocolate%20Crunchy%20Peanut%20Butter."
+                   target="_blank"
+                   class="product-button">
                     Order Now
                 </a>
 
             </div>
 
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FLAVOURS
+========================================================= -->
+
+<section class="flavours-section">
+
+    <div class="section-heading">
+
+        <p class="section-label">
+            EXCITING FLAVOURS &amp; NUTTY VARIATIONS
+        </p>
+
+        <div class="gold-line"></div>
+
+        <h2>
+            More to discover.
+        </h2>
+
+    </div>
+
+
+    <div class="flavour-grid">
+
+        <div class="flavour-item">
+            <div class="flavour-icon">🥜</div>
+            <h3>Peanut</h3>
+            <p>Classic goodness</p>
         </div>
 
-    </section>
+        <div class="flavour-item">
+            <div class="flavour-icon">🌰</div>
+            <h3>Badam</h3>
+            <p>Almond richness</p>
+        </div>
+
+        <div class="flavour-item">
+            <div class="flavour-icon">◈</div>
+            <h3>Cashew</h3>
+            <p>Creamy indulgence</p>
+        </div>
+
+        <div class="flavour-item">
+            <div class="flavour-icon">✦</div>
+            <h3>Pistah</h3>
+            <p>Pistachio delight</p>
+        </div>
+
+        <div class="flavour-item">
+            <div class="flavour-icon">◆</div>
+            <h3>More Flavours</h3>
+            <p>Coming soon</p>
+        </div>
+
+    </div>
+
+</section>
 
 
-    <!-- ================= BENEFITS ================= -->
-    <section id="benefits" class="benefits-section">
+<!-- =========================================================
+     BENEFITS
+========================================================= -->
+
+<section id="benefits" class="benefits-section">
+
+    <div class="section-container">
 
         <div class="section-heading">
 
@@ -357,8 +565,11 @@
                 WHY HAROVA
             </p>
 
+            <div class="gold-line"></div>
+
             <h2>
-                Goodness You Can Taste
+                Good food should feel<br>
+                <span>good in every way.</span>
             </h2>
 
         </div>
@@ -368,16 +579,13 @@
 
             <div class="benefit-card">
 
-                <div class="benefit-icon">
-                    🌿
-                </div>
+                <span class="benefit-number">01</span>
 
-                <h3>
-                    100% Natural
-                </h3>
+                <h3>Quality Ingredients</h3>
 
                 <p>
-                    Made with carefully selected ingredients.
+                    We focus on carefully selected ingredients
+                    to deliver a satisfying taste.
                 </p>
 
             </div>
@@ -385,16 +593,13 @@
 
             <div class="benefit-card">
 
-                <div class="benefit-icon">
-                    🍯
-                </div>
+                <span class="benefit-number">02</span>
 
-                <h3>
-                    Honey Sweetened
-                </h3>
+                <h3>Honest Craftsmanship</h3>
 
                 <p>
-                    A delicious naturally sweetened experience.
+                    Every product is created with attention
+                    to quality and consistency.
                 </p>
 
             </div>
@@ -402,16 +607,13 @@
 
             <div class="benefit-card">
 
-                <div class="benefit-icon">
-                    🚫
-                </div>
+                <span class="benefit-number">03</span>
 
-                <h3>
-                    No Preservatives
-                </h3>
+                <h3>Rich Flavours</h3>
 
                 <p>
-                    No unnecessary chemicals or preservatives.
+                    From smooth creamy textures to
+                    satisfying crunchy bites.
                 </p>
 
             </div>
@@ -419,87 +621,162 @@
 
             <div class="benefit-card">
 
-                <div class="benefit-icon">
-                    🥜
-                </div>
+                <span class="benefit-number">04</span>
 
-                <h3>
-                    Rich & Creamy
-                </h3>
+                <h3>Made for Everyday Life</h3>
 
                 <p>
-                    Smooth, satisfying peanut butter goodness.
+                    Easy to enjoy at breakfast, snacks,
+                    smoothies and desserts.
                 </p>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- ================= CONTACT ================= -->
-    <section id="contact" class="contact-section">
+<!-- =========================================================
+     CONTACT
+========================================================= -->
 
-        <div class="contact-content">
+<section id="contact" class="contact-section">
 
-            <p class="section-label">
-                PLACE YOUR ORDER
-            </p>
+    <div class="contact-inner">
 
-            <h2>
-                Enjoy Harova Today
-            </h2>
+        <p class="section-label">
+            CONNECT WITH HAROVA
+        </p>
 
-            <p>
-                Choose your favourite flavour and contact us
-                directly to place your order.
-            </p>
+        <div class="gold-line"></div>
+
+        <h2>
+            Let's make every jar<br>
+            <span>worth remembering.</span>
+        </h2>
+
+        <p class="contact-description">
+            Have a question, want to place an order,
+            or simply want to know more about Harova?
+            We'd love to hear from you.
+        </p>
+
+
+        <div class="contact-options">
 
             <a href="https://wa.me/918147408642"
-               class="whatsapp-button">
-                💬 Order on WhatsApp
+               target="_blank"
+               class="contact-card">
+
+                <span class="contact-icon">☎</span>
+
+                <div>
+                    <small>WHATSAPP</small>
+                    <strong>+91 81474 08642</strong>
+                </div>
+
             </a>
 
 
-            <div class="contact-details">
+            <a href="mailto:support@pinebow.in"
+               class="contact-card">
 
-                <p>
-                    📱 <strong>+91 81474 08642</strong>
-                </p>
+                <span class="contact-icon">✉</span>
 
-                <p>
-                    ✉️ <strong>support@pinebow.in</strong>
-                </p>
+                <div>
+                    <small>EMAIL</small>
+                    <strong>support@pinebow.in</strong>
+                </div>
 
-            </div>
+            </a>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- ================= FOOTER ================= -->
-    <footer class="site-footer">
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
 
         <div class="footer-brand">
-            <img src="Harova_Logo.jpeg"
-                 alt="Harova Logo">
+
+            <img src="Harova_Logo.jpeg" alt="Harova">
+
+            <p>
+                THE PURSUIT OF WELLBEING.
+            </p>
+
         </div>
 
-        <p>
-            Harova Peanut Butter
-        </p>
 
-        <p class="footer-tagline">
-            PURE NUTRITION FOR A BETTER YOU
-        </p>
+        <div class="footer-links">
 
-        <p class="copyright">
-            © 2026 Harova. All rights reserved.
-        </p>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#benefits">Benefits</a>
+            <a href="#contact">Contact</a>
 
-    </footer>
+        </div>
+
+
+        <div class="footer-copy">
+
+            <p>
+                © <span id="year"></span> Harova.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+function toggleMenu() {
+
+    const navigation =
+        document.querySelector(".navigation");
+
+    navigation.classList.toggle("show");
+
+}
+
+
+document.querySelectorAll(".navigation a").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        document
+            .querySelector(".navigation")
+            .classList.remove("show");
+
+    });
+
+});
+
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
 
 </body>
 </html>

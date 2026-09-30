@@ -1703,3 +1703,114 @@ a[href="#products"] {
     }
 
 }
+
+/* =========================================================
+   HAROVA — PREMIUM GOLDEN HEADER ATMOSPHERE
+   Does NOT change logo or menu
+========================================================= */
+
+.site-header {
+    position: fixed;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            ellipse at 25% 50%,
+            rgba(217, 164, 65, 0.13) 0%,
+            rgba(217, 164, 65, 0.055) 22%,
+            transparent 52%
+        ),
+        radial-gradient(
+            ellipse at 75% 50%,
+            rgba(217, 164, 65, 0.08) 0%,
+            transparent 48%
+        ),
+        rgba(3, 3, 3, 0.96);
+}
+
+/* Soft golden light flowing through the empty space */
+.site-header::before {
+    content: "";
+    position: absolute;
+    top: -80%;
+    left: -20%;
+    width: 55%;
+    height: 260%;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(217, 164, 65, 0.02) 35%,
+        rgba(255, 210, 105, 0.12) 50%,
+        rgba(217, 164, 65, 0.02) 65%,
+        transparent 100%
+    );
+    transform: rotate(12deg);
+    filter: blur(18px);
+    animation: harovaHeaderLight 8s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Elegant golden glow along the bottom edge */
+.site-header::after {
+    content: "";
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(217, 164, 65, 0.35),
+        rgba(255, 215, 120, 0.9),
+        rgba(217, 164, 65, 0.35),
+        transparent
+    );
+    box-shadow:
+        0 0 8px rgba(217, 164, 65, 0.45),
+        0 0 20px rgba(217, 164, 65, 0.18);
+    pointer-events: none;
+    z-index: 3;
+}
+
+.header-inner {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes harovaHeaderLight {
+    0% {
+        transform: translateX(-25%) rotate(12deg);
+        opacity: 0.35;
+    }
+
+    50% {
+        transform: translateX(130%) rotate(12deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(260%) rotate(12deg);
+        opacity: 0.35;
+    }
+}
+
+/* Keep the effect subtle on smaller screens */
+@media (max-width: 850px) {
+    .site-header::before {
+        width: 70%;
+        animation-duration: 10s;
+    }
+
+    .site-header::after {
+        left: 4%;
+        right: 4%;
+    }
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .site-header::before {
+        animation: none;
+    }
+}

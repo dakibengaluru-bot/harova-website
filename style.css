@@ -1354,3 +1354,352 @@ button {
     }
 
 }     
+
+/* =========================================================
+   HAROVA — PREMIUM HEADER LOGO & LIGHT EFFECT
+   Paste this entire block at the VERY BOTTOM of style.css
+========================================================= */
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Keep all header content above the light effect */
+
+.site-header > * {
+    position: relative;
+    z-index: 5;
+}
+
+
+/* =========================================================
+   HAROVA HEADER BRAND
+========================================================= */
+
+.brand {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 205px;
+    height: 100px;
+
+    overflow: visible;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   SOFT GOLDEN GLOW BEHIND LOGO
+========================================================= */
+
+.brand::before {
+    content: "";
+
+    position: absolute;
+
+    width: 155px;
+    height: 155px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: radial-gradient(
+        circle,
+        rgba(218, 170, 55, 0.24) 0%,
+        rgba(218, 170, 55, 0.12) 28%,
+        rgba(218, 170, 55, 0.05) 48%,
+        transparent 72%
+    );
+
+    filter: blur(10px);
+
+    opacity: 0.75;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    animation: harovaLogoGlow 4.5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   HAROVA LOGO
+========================================================= */
+
+.brand img {
+    position: relative;
+
+    z-index: 2;
+
+    width: 190px;
+    height: 92px;
+
+    object-fit: contain;
+
+    display: block;
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 0;
+
+    filter:
+        drop-shadow(0 0 5px rgba(255, 255, 255, 0.22))
+        drop-shadow(0 0 10px rgba(218, 170, 55, 0.20))
+        drop-shadow(0 0 20px rgba(218, 170, 55, 0.10));
+
+    transition:
+        transform 0.45s ease,
+        filter 0.45s ease;
+}
+
+
+/* =========================================================
+   LOGO HOVER EFFECT
+========================================================= */
+
+.brand:hover img {
+    transform: scale(1.06);
+
+    filter:
+        drop-shadow(0 0 7px rgba(255, 255, 255, 0.40))
+        drop-shadow(0 0 14px rgba(218, 170, 55, 0.50))
+        drop-shadow(0 0 28px rgba(218, 170, 55, 0.22));
+}
+
+
+/* =========================================================
+   LOGO GLOW ANIMATION
+========================================================= */
+
+@keyframes harovaLogoGlow {
+
+    0% {
+        opacity: 0.42;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.90);
+    }
+
+    50% {
+        opacity: 0.90;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.10);
+    }
+
+    100% {
+        opacity: 0.42;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.90);
+    }
+
+}
+
+
+/* =========================================================
+   GOLDEN LIGHT SWEEP ACROSS HEADER
+========================================================= */
+
+.site-header::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -220px;
+
+    width: 150px;
+
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(218, 170, 55, 0.03) 20%,
+        rgba(255, 220, 120, 0.18) 45%,
+        rgba(255, 230, 150, 0.28) 50%,
+        rgba(218, 170, 55, 0.10) 65%,
+        transparent 100%
+    );
+
+    transform: skewX(-22deg);
+
+    pointer-events: none;
+
+    z-index: 3;
+
+    animation: harovaHeaderLightSweep 8s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   HEADER LIGHT SWEEP ANIMATION
+========================================================= */
+
+@keyframes harovaHeaderLightSweep {
+
+    0% {
+        left: -220px;
+
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    45% {
+        left: 115%;
+
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        left: 115%;
+
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================================================
+   NAVIGATION PREMIUM HOVER
+========================================================= */
+
+.navigation a {
+    position: relative;
+
+    transition:
+        color 0.3s ease,
+        text-shadow 0.3s ease;
+}
+
+
+/* Golden glow when hovering navigation */
+
+.navigation a:hover {
+    color: #f2c75c;
+
+    text-shadow:
+        0 0 8px rgba(218, 170, 55, 0.35),
+        0 0 16px rgba(218, 170, 55, 0.12);
+}
+
+
+/* =========================================================
+   ACTIVE HOME LINK
+========================================================= */
+
+.navigation a.active {
+    color: #f2c75c;
+
+    text-shadow:
+        0 0 8px rgba(218, 170, 55, 0.20);
+}
+
+
+/* =========================================================
+   SHOP NOW PREMIUM GLOW
+========================================================= */
+
+.shop-button,
+.shop-now,
+a[href="#products"] {
+    transition:
+        box-shadow 0.35s ease,
+        transform 0.35s ease;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .brand {
+        width: 165px;
+        height: 78px;
+    }
+
+    .brand img {
+        width: 150px;
+        height: 70px;
+    }
+
+    .brand::before {
+        width: 125px;
+        height: 125px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .brand {
+        width: 145px;
+        height: 70px;
+    }
+
+    .brand img {
+        width: 135px;
+        height: 64px;
+    }
+
+    .brand::before {
+        width: 110px;
+        height: 110px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCE ANIMATION FOR USERS WHO PREFER LESS MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .brand::before,
+    .site-header::after {
+        animation: none;
+    }
+
+    .brand img {
+        transition: none;
+    }
+
+}

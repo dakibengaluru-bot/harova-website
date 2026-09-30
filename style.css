@@ -241,22 +241,29 @@ button {
 }
 
 .hero-logo-mark {
-    width: 150px;
-    height: 105px;
-    margin: 0 auto 10px;
+    width: 190px;
+    height: 135px;
+    margin: 0 auto 8px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    overflow: hidden;
+   background: transparent; 
+   overflow: visible;
 }
 
 .hero-logo-mark img {
-    width: 150px;
-    height: 105px;
+    width: 190px;
+    height: 135px;
     object-fit: contain;
-    filter: drop-shadow(0 0 12px rgba(217, 164, 65, 0.2));
+    display: block;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.12));
 }
 
 .hero-tagline,

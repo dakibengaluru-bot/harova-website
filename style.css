@@ -3975,3 +3975,31 @@ a[href="#products"] {
     object-fit: contain !important;
     background: #050505 !important;
 }
+
+/* =========================================================
+   HAROVA — GOLD FRAME OUTSIDE FULL PHOTO
+========================================================= */
+
+.about-image .image-frame {
+    position: relative !important;
+    display: inline-block !important;
+    padding: 10px !important;
+    border: 2px solid #d4a64a !important;
+    background: #050505 !important;
+    box-shadow: 0 0 20px rgba(212, 166, 74, 0.15) !important;
+}
+
+/* Remove all previous decorative lines */
+.about-image .image-frame::before,
+.about-image .image-frame::after {
+    display: none !important;
+}
+
+/* Keep the photograph exactly as it is */
+.about-image .image-frame img {
+    display: block !important;
+    width: 100% !important;
+    height: 420px !important;
+    object-fit: contain !important;
+    background: #050505 !important;
+}

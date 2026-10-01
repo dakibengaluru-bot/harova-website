@@ -3917,3 +3917,26 @@ a[href="#products"] {
     height: 420px;
     object-fit: cover;
 }
+
+/* =========================================================
+   HAROVA — ABOUT IMAGE MATCH HEADER IMAGE
+========================================================= */
+
+.about-image .image-frame {
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.about-image .image-frame::before,
+.about-image .image-frame::after {
+    display: none !important;
+}
+
+.about-image .image-frame img {
+    display: block !important;
+    width: 100% !important;
+    height: 420px !important;
+    object-fit: contain !important;
+    background: #050505 !important;
+}

@@ -4255,3 +4255,10 @@ a[href="#products"] {
     flex-direction: column !important;
     align-items: flex-start !important;
 }
+
+/* FOOTER LOGO - LARGER */
+.footer-brand img {
+    width: 200px !important;
+    height: auto !important;
+    object-fit: contain !important;
+}

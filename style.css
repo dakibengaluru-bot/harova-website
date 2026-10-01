@@ -4056,3 +4056,34 @@ a[href="#products"] {
         inset 0 0 25px rgba(212, 166, 74, 0.10),
         0 0 20px rgba(212, 166, 74, 0.12) !important;
 }
+
+/* =========================================================
+   HAROVA — STRONG GOLDEN IMAGE GLOW
+========================================================= */
+
+.about-image .image-frame {
+    position: relative !important;
+
+    outline: 2px solid #d9aa45 !important;
+    outline-offset: 12px !important;
+
+    box-shadow:
+        0 0 8px rgba(217, 170, 69, 0.95),
+        0 0 20px rgba(217, 170, 69, 0.75),
+        0 0 40px rgba(217, 170, 69, 0.45),
+        0 0 70px rgba(217, 170, 69, 0.22),
+        0 0 100px rgba(217, 170, 69, 0.10) !important;
+}
+
+/* Keep the photograph itself unchanged */
+.about-image .image-frame img {
+    position: relative !important;
+    z-index: 2 !important;
+    display: block !important;
+
+    width: 100% !important;
+    height: 420px !important;
+    object-fit: contain !important;
+
+    background: #050505 !important;
+}

@@ -2869,3 +2869,255 @@ a[href="#products"] {
     content: none !important;
     display: none !important;
 }
+
+/* =========================================================
+   HAROVA — LUXURY PRODUCT FRAME
+   REFERENCE STYLE
+========================================================= */
+
+.hero-product-frame {
+    position: relative;
+
+    /* Wider luxury frame */
+    width: min(610px, 100%);
+    height: 500px;
+
+    padding: 0;
+    margin: 0 auto;
+
+    background: #050505;
+
+    /* Thin gold outer border */
+    border: 1px solid rgba(245, 195, 70, 0.95);
+
+    /* Luxury gold glow */
+    box-shadow:
+        0 0 8px rgba(245, 195, 70, 0.65),
+        0 0 25px rgba(217, 164, 65, 0.35),
+        0 0 55px rgba(217, 164, 65, 0.18);
+
+    overflow: visible;
+}
+
+
+/* Product image */
+.hero-product-frame img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    background: #050505;
+
+    /* Make jar slightly more dominant */
+    transform: scale(1.01);
+}
+
+
+/* Inner elegant gold border */
+.hero-product-frame::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border: 1px solid rgba(244, 205, 105, 0.75);
+
+    pointer-events: none;
+
+    z-index: 3;
+}
+
+
+/* Gold corner bracket system */
+.hero-product-frame::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    pointer-events: none;
+
+    z-index: 4;
+
+    border-top: 3px solid #f5c94d;
+    border-left: 3px solid #f5c94d;
+
+    width: 48px;
+    height: 48px;
+
+    box-shadow:
+        -2px -2px 8px rgba(245, 195, 70, 0.45);
+}
+
+
+/* Use the existing corner elements for all four corners */
+.hero-product-frame .frame-corner {
+    position: absolute;
+
+    width: 48px;
+    height: 48px;
+
+    border-color: #f5c94d;
+
+    z-index: 5;
+
+    filter:
+        drop-shadow(0 0 5px rgba(245, 195, 70, 0.55));
+}
+
+
+/* Top-left */
+.hero-product-frame .top-left {
+    top: 12px;
+    left: 12px;
+
+    border-top: 3px solid;
+    border-left: 3px solid;
+}
+
+
+/* Top-right */
+.hero-product-frame .top-right {
+    top: 12px;
+    right: 12px;
+
+    border-top: 3px solid;
+    border-right: 3px solid;
+}
+
+
+/* Bottom-left */
+.hero-product-frame .bottom-left {
+    bottom: 12px;
+    left: 12px;
+
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+}
+
+
+/* Bottom-right */
+.hero-product-frame .bottom-right {
+    bottom: 12px;
+    right: 12px;
+
+    border-bottom: 3px solid;
+    border-right: 3px solid;
+}
+
+
+/* =========================================================
+   PREMIUM CAPTION
+========================================================= */
+
+.hero-product-caption {
+    position: relative;
+
+    display: flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 18px !important;
+
+    color: #f5c94d !important;
+
+    font-size: 11px !important;
+    font-weight: 600 !important;
+
+    letter-spacing: 4px !important;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 8px rgba(245, 195, 70, 0.45);
+}
+
+
+/* Gold lines beside caption */
+.hero-product-caption::before,
+.hero-product-caption::after {
+    content: "";
+
+    display: block;
+
+    width: 58px;
+    height: 1px;
+
+    background: #d9a441;
+
+    box-shadow:
+        0 0 5px rgba(217, 164, 65, 0.5);
+}
+
+
+/* Completely remove the old generated caption */
+.hero-product::after {
+    content: none !important;
+    display: none !important;
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 1100px) {
+
+    .hero-product-frame {
+        width: 610px;
+        height: 500px;
+    }
+
+    .hero-product-frame img {
+        object-fit: cover;
+        transform: scale(1.01);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .hero-product-frame {
+        width: min(560px, 100%);
+        height: 470px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .hero-product-frame {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1.2 / 1;
+    }
+
+    .hero-product-caption {
+        font-size: 8px !important;
+        letter-spacing: 2.5px !important;
+        gap: 10px;
+    }
+
+    .hero-product-caption::before,
+    .hero-product-caption::after {
+        width: 35px;
+    }
+}

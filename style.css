@@ -2299,5 +2299,81 @@ a[href="#products"] {
             transparent 72%
         ) !important;
 
+   /* =========================================================
+   HAROVA — PURE GOLD FRAME CORNERS
+========================================================= */
+
+.hero-product-frame::after {
+    inset: -11px !important;
+
+    background:
+        /* TOP LEFT */
+        linear-gradient(
+            90deg,
+            #f6cf72 0,
+            #d9a441 60px,
+            transparent 60px
+        ) top left / 60px 2px no-repeat,
+
+        linear-gradient(
+            180deg,
+            #f6cf72 0,
+            #d9a441 60px,
+            transparent 60px
+        ) top left / 2px 60px no-repeat,
+
+        /* TOP RIGHT */
+        linear-gradient(
+            270deg,
+            #f6cf72 0,
+            #d9a441 60px,
+            transparent 60px
+        ) top right / 60px 2px no-repeat,
+
+        linear-gradient(
+            180deg,
+            #f6cf72 0,
+            #d9a441 60px,
+            transparent 60px
+        ) top right / 2px 60px no-repeat,
+
+        /* BOTTOM LEFT */
+        linear-gradient(
+            90deg,
+            #f6cf72 0,
+            #d9a441 60px,
+            transparent 60px
+        ) bottom left / 60px 2px no-repeat,
+
+        linear-gradient(
+            0deg,
+            #f6cf72 0,
+            #d9a441 60px,
+            transparent 60px
+        ) bottom left / 2px 60px no-repeat,
+
+        /* BOTTOM RIGHT */
+        linear-gradient(
+            270deg,
+            #f6cf72 0,
+            #d9a441 60px,
+            transparent 60px
+        ) bottom right / 60px 2px no-repeat,
+
+        linear-gradient(
+            0deg,
+            #f6cf72 0,
+            #d9a441 60px,
+            transparent 60px
+        ) bottom right / 2px 60px no-repeat;
+
+    filter:
+        drop-shadow(0 0 4px rgba(246, 207, 114, 0.95))
+        drop-shadow(0 0 12px rgba(217, 164, 65, 0.55));
+
+    pointer-events: none;
+    z-index: 5;
+}
+
     filter: blur(28px) !important;
 }

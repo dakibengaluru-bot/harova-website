@@ -3416,3 +3416,20 @@ a[href="#products"] {
     pointer-events: none !important;
     z-index: 3 !important;
 }
+
+/* =========================================================
+   REMOVE FINAL TOP-LEFT GOLD LINE
+========================================================= */
+
+.hero-product-frame::before {
+    content: none !important;
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+
+    border: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    box-shadow: none !important;
+    background: none !important;
+}

@@ -4226,3 +4226,15 @@ a[href="#products"] {
     margin: 0 auto 22px !important;
     box-shadow: 0 0 8px rgba(217, 170, 69, 0.35) !important;
 }
+
+/* CENTER FLAVOURS HEADING */
+#flavours .section-label,
+#flavours .section-title {
+    width: 100% !important;
+    text-align: center !important;
+}
+
+#flavours .section-title {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}

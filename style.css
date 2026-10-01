@@ -3848,3 +3848,18 @@ a[href="#products"] {
         gap: 30px;
     }
 }
+
+/* =========================================================
+   HAROVA — TIGHT PREMIUM ABOUT SECTION
+   REMOVE LARGE TOP & BOTTOM GAPS
+========================================================= */
+
+.about-section {
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
+}
+
+.about-grid {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}

@@ -4088,3 +4088,72 @@ a[href="#products"] {
     background: #050505 !important;
 }
 
+/* =========================================
+   HAROVA FLAVOURS - FIX FIVE COLUMN LAYOUT
+   ========================================= */
+
+.flavours-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 0 !important;
+    width: 100% !important;
+    max-width: 1100px !important;
+    margin: 50px auto 0 !important;
+}
+
+.flavour-item {
+    width: 100% !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: center !important;
+}
+
+.flavour-image {
+    width: 150px !important;
+    height: 120px !important;
+    margin: 0 auto 18px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.flavour-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    display: block !important;
+}
+
+
+/* Vertical gold separators */
+
+.flavour-item + .flavour-item {
+    border-left: 1px solid rgba(217, 164, 65, 0.25);
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .flavours-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        row-gap: 45px !important;
+    }
+
+    .flavour-item:nth-child(odd) {
+        border-left: none !important;
+    }
+
+    .flavour-item:nth-child(even) {
+        border-left: 1px solid rgba(217, 164, 65, 0.25);
+    }
+
+    .flavour-image {
+        width: 120px !important;
+        height: 100px !important;
+    }
+}

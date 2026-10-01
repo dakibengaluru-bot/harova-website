@@ -4194,3 +4194,35 @@ a[href="#products"] {
         height: 100px !important;
     }
 }
+
+/* =========================================
+   HAROVA FLAVOURS - HEADING STYLE
+   ========================================= */
+
+#flavours .section-label {
+    text-align: center !important;
+    margin-bottom: 18px !important;
+}
+
+#flavours .section-title {
+    position: relative !important;
+    text-align: center !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 48px !important;
+    font-weight: 400 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    color: #f2e8d5 !important;
+    margin: 0 auto 55px !important;
+    line-height: 1.15 !important;
+}
+
+#flavours .section-title::before {
+    content: "" !important;
+    display: block !important;
+    width: 72px !important;
+    height: 1px !important;
+    background: #d9aa45 !important;
+    margin: 0 auto 22px !important;
+    box-shadow: 0 0 8px rgba(217, 170, 69, 0.35) !important;
+}

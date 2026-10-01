@@ -1838,50 +1838,270 @@ a[href="#products"] {
 }
 
 /* =========================================================
-   HAROVA — LARGE PREMIUM PRODUCT FRAME
+   HAROVA — LUXURY HERO PRODUCT FRAME
+   Large Jar + Premium Gold Glow
 ========================================================= */
 
 .hero-product-frame {
-    width: min(560px, 100%);
-    padding: 10px;
-    overflow: hidden;
-    border: 1px solid rgba(217, 164, 65, 0.75);
+    position: relative;
+    width: min(640px, 100%);
+    padding: 12px;
+    overflow: visible;
+
+    background: #050505;
+
+    border: 1px solid rgba(217, 164, 65, 0.85);
+
     box-shadow:
-        0 0 0 1px rgba(217, 164, 65, 0.08),
-        0 0 35px rgba(217, 164, 65, 0.08);
+        0 0 0 1px rgba(255, 210, 105, 0.08),
+        0 0 25px rgba(217, 164, 65, 0.16),
+        0 0 60px rgba(217, 164, 65, 0.08);
 }
 
-/* Make the product image area substantially larger */
-.hero-product-frame img {
-    width: 100%;
-    height: 450px;
-    object-fit: contain;
-    transform: scale(1.25);
-    transform-origin: center center;
-    display: block;
-}
 
-/* Elegant gold corner glow */
+/* =========================================================
+   GOLDEN OUTER LIGHT
+========================================================= */
+
 .hero-product-frame::before {
     content: "";
     position: absolute;
-    inset: -1px;
-    border: 1px solid rgba(255, 210, 105, 0.22);
+    inset: -5px;
+
+    border: 1px solid rgba(255, 210, 105, 0.35);
+
+    box-shadow:
+        0 0 18px rgba(217, 164, 65, 0.25),
+        0 0 45px rgba(217, 164, 65, 0.10);
+
     pointer-events: none;
+    z-index: 3;
 }
 
-/* Keep the frame attractive on smaller screens */
-@media (max-width: 850px) {
+
+/* =========================================================
+   LUXURY GOLD CORNER BRACKETS
+========================================================= */
+
+.hero-product-frame::after {
+    content: "";
+    position: absolute;
+    inset: -8px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 225, 145, 0.95) 0 55px,
+            transparent 55px
+        ) top left / 55px 2px no-repeat,
+
+        linear-gradient(
+            180deg,
+            rgba(255, 225, 145, 0.95) 0 55px,
+            transparent 55px
+        ) top left / 2px 55px no-repeat,
+
+        linear-gradient(
+            270deg,
+            rgba(255, 225, 145, 0.95) 0 55px,
+            transparent 55px
+        ) top right / 55px 2px no-repeat,
+
+        linear-gradient(
+            180deg,
+            rgba(255, 225, 145, 0.95) 0 55px,
+            transparent 55px
+        ) top right / 2px 55px no-repeat,
+
+        linear-gradient(
+            90deg,
+            rgba(255, 225, 145, 0.95) 0 55px,
+            transparent 55px
+        ) bottom left / 55px 2px no-repeat,
+
+        linear-gradient(
+            0deg,
+            rgba(255, 225, 145, 0.95) 0 55px,
+            transparent 55px
+        ) bottom left / 2px 55px no-repeat,
+
+        linear-gradient(
+            270deg,
+            rgba(255, 225, 145, 0.95) 0 55px,
+            transparent 55px
+        ) bottom right / 55px 2px no-repeat,
+
+        linear-gradient(
+            0deg,
+            rgba(255, 225, 145, 0.95) 0 55px,
+            transparent 55px
+        ) bottom right / 2px 55px no-repeat;
+
+    pointer-events: none;
+    z-index: 5;
+}
+
+
+/* =========================================================
+   MAKE THE PRODUCT IMAGE AREA BIGGER
+========================================================= */
+
+.hero-product-frame img {
+    width: 100%;
+    height: 520px;
+
+    object-fit: cover;
+    object-position: center center;
+
+    display: block;
+
+    transform: scale(1.08);
+    transform-origin: center center;
+
+    background: #050505;
+
+    filter:
+        contrast(1.04)
+        saturate(1.04);
+}
+
+
+/* =========================================================
+   GOLDEN LIGHT BEHIND THE PRODUCT
+========================================================= */
+
+.hero-product {
+    position: relative;
+}
+
+.hero-product::before {
+    content: "";
+
+    position: absolute;
+
+    width: 480px;
+    height: 480px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(217, 164, 65, 0.18) 0%,
+            rgba(217, 164, 65, 0.08) 30%,
+            rgba(217, 164, 65, 0.025) 55%,
+            transparent 75%
+        );
+
+    filter: blur(18px);
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+/* Keep product frame above the glow */
+.hero-product-frame {
+    z-index: 2;
+}
+
+
+/* =========================================================
+   PREMIUM PEANUT BUTTER LABEL
+========================================================= */
+
+.hero-product .hero-product-label {
+    position: relative;
+    margin-top: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+
+    color: #f2c75c;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 8px rgba(217, 164, 65, 0.35);
+}
+
+.hero-product .hero-product-label::before,
+.hero-product .hero-product-label::after {
+    content: "";
+
+    width: 55px;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(217, 164, 65, 0.85)
+    );
+}
+
+.hero-product .hero-product-label::after {
+    background: linear-gradient(
+        90deg,
+        rgba(217, 164, 65, 0.85),
+        transparent
+    );
+}
+
+
+/* =========================================================
+   DESKTOP — MORE DRAMATIC PRODUCT PRESENCE
+========================================================= */
+
+@media (min-width: 1100px) {
+
     .hero-product-frame {
-        width: min(520px, 100%);
+        width: min(650px, 100%);
     }
 
     .hero-product-frame img {
-        height: 400px;
+        height: 540px;
+        transform: scale(1.08);
     }
 }
 
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .hero-product-frame {
+        width: min(580px, 100%);
+    }
+
+    .hero-product-frame img {
+        height: 450px;
+        transform: scale(1.05);
+    }
+
+    .hero-product::before {
+        width: 380px;
+        height: 380px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 600px) {
+
     .hero-product-frame {
         width: 100%;
         padding: 8px;
@@ -1889,6 +2109,21 @@ a[href="#products"] {
 
     .hero-product-frame img {
         height: 340px;
-        transform: scale(1.08);
+        transform: scale(1.04);
+    }
+
+    .hero-product-frame::after {
+        inset: -5px;
+    }
+
+    .hero-product .hero-product-label {
+        gap: 10px;
+        font-size: 9px;
+        letter-spacing: 2.5px;
+    }
+
+    .hero-product .hero-product-label::before,
+    .hero-product .hero-product-label::after {
+        width: 30px;
     }
 }

@@ -4089,32 +4089,50 @@ a[href="#products"] {
 }
 
 /* =========================================
-   HAROVA FLAVOURS - FIX FIVE COLUMN LAYOUT
+   HAROVA FLAVOURS - REAL IMAGES
    ========================================= */
 
-.flavours-grid {
+.flavour-grid {
     display: grid !important;
     grid-template-columns: repeat(5, 1fr) !important;
     gap: 0 !important;
+
     width: 100% !important;
     max-width: 1100px !important;
+
     margin: 50px auto 0 !important;
 }
 
 .flavour-item {
     width: 100% !important;
     min-width: 0 !important;
+
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: flex-start !important;
+
     text-align: center !important;
+
+    padding: 25px 10px !important;
+
+    border-right: 1px solid rgba(217, 164, 65, 0.18) !important;
+    border-left: none !important;
 }
+
+.flavour-item:last-child {
+    border-right: none !important;
+}
+
+
+/* Real nut photographs */
 
 .flavour-image {
     width: 150px !important;
     height: 120px !important;
+
     margin: 0 auto 18px !important;
+
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -4123,15 +4141,34 @@ a[href="#products"] {
 .flavour-image img {
     width: 100% !important;
     height: 100% !important;
+
     object-fit: contain !important;
+
     display: block !important;
+
+    filter:
+        drop-shadow(0 0 6px rgba(217, 170, 69, 0.35))
+        drop-shadow(0 0 18px rgba(217, 170, 69, 0.18)) !important;
+
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.flavour-item:hover .flavour-image img {
+    transform: scale(1.08);
+
+    filter:
+        drop-shadow(0 0 8px rgba(217, 170, 69, 0.55))
+        drop-shadow(0 0 24px rgba(217, 170, 69, 0.30)) !important;
 }
 
 
-/* Vertical gold separators */
+/* Hide the old circular icon styling */
 
-.flavour-item + .flavour-item {
-    border-left: 1px solid rgba(217, 164, 65, 0.25);
+.flavour-icon {
+    border: none !important;
+    border-radius: 0 !important;
+    width: auto !important;
+    height: auto !important;
 }
 
 
@@ -4139,17 +4176,17 @@ a[href="#products"] {
 
 @media (max-width: 768px) {
 
-    .flavours-grid {
+    .flavour-grid {
         grid-template-columns: repeat(2, 1fr) !important;
-        row-gap: 45px !important;
+        row-gap: 35px !important;
     }
 
-    .flavour-item:nth-child(odd) {
-        border-left: none !important;
+    .flavour-item {
+        border-right: none !important;
     }
 
     .flavour-item:nth-child(even) {
-        border-left: 1px solid rgba(217, 164, 65, 0.25);
+        border-left: 1px solid rgba(217, 164, 65, 0.25) !important;
     }
 
     .flavour-image {

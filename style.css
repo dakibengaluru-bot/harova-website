@@ -4034,3 +4034,25 @@ a[href="#products"] {
     object-fit: contain !important;
     background: #050505 !important;
 }
+
+/* =========================================================
+   HAROVA — GOLDEN GLOW FOR ABOUT IMAGE
+========================================================= */
+
+.about-image .image-frame {
+    outline: 2px solid #d4a64a !important;
+    outline-offset: 12px !important;
+
+    box-shadow:
+        0 0 8px rgba(212, 166, 74, 0.85),
+        0 0 22px rgba(212, 166, 74, 0.55),
+        0 0 45px rgba(212, 166, 74, 0.28),
+        0 0 75px rgba(212, 166, 74, 0.14) !important;
+}
+
+/* Golden light around the photograph */
+.about-image .image-frame img {
+    box-shadow:
+        inset 0 0 25px rgba(212, 166, 74, 0.10),
+        0 0 20px rgba(212, 166, 74, 0.12) !important;
+}

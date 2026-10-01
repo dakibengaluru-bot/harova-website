@@ -3940,3 +3940,38 @@ a[href="#products"] {
     object-fit: contain !important;
     background: #050505 !important;
 }
+
+/* =========================================================
+   HAROVA — OUTER GOLD FRAME ONLY
+========================================================= */
+
+.about-image .image-frame {
+    position: relative !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.about-image .image-frame::before {
+    display: none !important;
+}
+
+.about-image .image-frame::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    border: 1px solid #d4a64a;
+    box-shadow: 0 0 18px rgba(212, 166, 74, 0.12);
+    pointer-events: none;
+}
+
+.about-image .image-frame img {
+    display: block !important;
+    width: 100% !important;
+    height: 420px !important;
+    object-fit: contain !important;
+    background: #050505 !important;
+}

@@ -3433,3 +3433,262 @@ a[href="#products"] {
     box-shadow: none !important;
     background: none !important;
 }
+
+/* =========================================================
+   HAROVA — OUTER LUXURY PRODUCT FRAME
+   GOLD FRAME OUTSIDE THE PRODUCT IMAGE
+========================================================= */
+
+
+/* Main product frame */
+.hero-product-frame {
+    position: relative !important;
+
+    width: 610px !important;
+    height: 560px !important;
+
+    padding: 12px !important;
+
+    margin: 0 auto !important;
+
+    background: #050505 !important;
+
+    /* Strong outer gold frame */
+    border: 2px solid #e7b83f !important;
+
+    /* Luxury glow */
+    box-shadow:
+        0 0 8px rgba(245, 195, 70, 0.90),
+        0 0 22px rgba(245, 195, 70, 0.45),
+        0 0 50px rgba(217, 164, 65, 0.22) !important;
+
+    overflow: visible !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* The actual product photograph */
+.hero-product-frame img {
+    position: relative !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    display: block !important;
+
+    object-fit: cover !important;
+
+    background: #050505 !important;
+
+    transform: none !important;
+
+    border: none !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* Second elegant gold line OUTSIDE the photograph */
+.hero-product-frame::before {
+    content: "" !important;
+
+    position: absolute !important;
+
+    top: 5px !important;
+    left: 5px !important;
+    right: 5px !important;
+    bottom: 5px !important;
+
+    border: 1px solid rgba(245, 205, 105, 0.75) !important;
+
+    background: transparent !important;
+
+    pointer-events: none !important;
+
+    z-index: 5 !important;
+}
+
+
+/* Completely remove all old decorations */
+.hero-product-frame::after {
+    content: none !important;
+
+    display: none !important;
+
+    visibility: hidden !important;
+
+    opacity: 0 !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+
+    background: none !important;
+}
+
+
+/* Remove the old four corner elements */
+.hero-product-frame > .frame-corner,
+.hero-product-frame .frame-corner,
+.hero-product-frame .top-left,
+.hero-product-frame .top-right,
+.hero-product-frame .bottom-left,
+.hero-product-frame .bottom-right {
+    display: none !important;
+
+    visibility: hidden !important;
+
+    opacity: 0 !important;
+
+    width: 0 !important;
+    height: 0 !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+
+    background: none !important;
+}
+
+
+/* =========================================================
+   PREMIUM PEANUT BUTTER CAPTION
+========================================================= */
+
+.hero-product-caption {
+    display: flex !important;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 18px !important;
+
+    color: #f5c94d !important;
+
+    font-size: 11px !important;
+
+    font-weight: 600 !important;
+
+    letter-spacing: 4px !important;
+
+    text-align: center !important;
+
+    text-transform: uppercase !important;
+
+    text-shadow:
+        0 0 8px rgba(245, 195, 70, 0.45) !important;
+}
+
+
+/* Left gold line */
+.hero-product-caption::before {
+    content: "" !important;
+
+    display: block !important;
+
+    width: 60px !important;
+
+    height: 1px !important;
+
+    background: #d9a441 !important;
+
+    box-shadow:
+        0 0 5px rgba(217, 164, 65, 0.55) !important;
+}
+
+
+/* Right gold line */
+.hero-product-caption::after {
+    content: "" !important;
+
+    display: block !important;
+
+    width: 60px !important;
+
+    height: 1px !important;
+
+    background: #d9a441 !important;
+
+    box-shadow:
+        0 0 5px rgba(217, 164, 65, 0.55) !important;
+}
+
+
+/* Remove any generated caption from the product container */
+.hero-product::after {
+    content: none !important;
+
+    display: none !important;
+
+    visibility: hidden !important;
+
+    opacity: 0 !important;
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 1100px) {
+
+    .hero-product-frame {
+        width: 610px !important;
+        height: 560px !important;
+    }
+
+    .hero-product-frame img {
+        object-fit: cover !important;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .hero-product-frame {
+        width: min(560px, 100%) !important;
+
+        height: 520px !important;
+
+        padding: 10px !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .hero-product-frame {
+        width: 100% !important;
+
+        height: auto !important;
+
+        aspect-ratio: 1 / 1 !important;
+
+        padding: 8px !important;
+    }
+
+    .hero-product-caption {
+        font-size: 8px !important;
+
+        letter-spacing: 2.5px !important;
+
+        gap: 10px !important;
+    }
+
+    .hero-product-caption::before,
+    .hero-product-caption::after {
+        width: 35px !important;
+    }
+}

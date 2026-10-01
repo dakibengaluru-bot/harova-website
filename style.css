@@ -2829,3 +2829,12 @@ a[href="#products"] {
         letter-spacing: 2.5px;
     }
 }
+
+/* =========================================================
+   REMOVE DUPLICATE PRODUCT CAPTION
+========================================================= */
+
+.hero-product::after {
+    content: none !important;
+    display: none !important;
+}

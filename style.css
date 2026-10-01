@@ -1836,3 +1836,12 @@ a[href="#products"] {
     position: relative !important;
     z-index: 100000 !important;
 }
+
+/* =========================================================
+   HAROVA — ENLARGE HERO PRODUCT
+========================================================= */
+
+.hero-product-frame img {
+    transform: scale(1.18);
+    transform-origin: center center;
+}

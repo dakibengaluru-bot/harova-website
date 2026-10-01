@@ -2377,3 +2377,334 @@ a[href="#products"] {
 
     filter: blur(28px) !important;
 }
+
+/* =========================================================
+   HAROVA — PREMIUM PRODUCT DISPLAY
+   GOLD LUXURY FRAME / LARGE JAR
+========================================================= */
+
+/* Main product area */
+.hero-product-frame {
+    position: relative !important;
+    width: min(620px, 100%) !important;
+
+    padding: 10px !important;
+
+    background: #050505 !important;
+
+    border: 2px solid #d9a441 !important;
+
+    box-shadow:
+        0 0 6px rgba(255, 220, 120, 0.95),
+        0 0 18px rgba(217, 164, 65, 0.75),
+        0 0 45px rgba(217, 164, 65, 0.35),
+        0 0 90px rgba(217, 164, 65, 0.16) !important;
+
+    overflow: visible !important;
+}
+
+
+/* ---------------------------------------------------------
+   SECOND INNER GOLD FRAME
+--------------------------------------------------------- */
+
+.hero-product-frame::before {
+    content: "";
+    position: absolute;
+
+    top: 14px;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+
+    border: 1px solid rgba(246, 207, 114, 0.85);
+
+    box-shadow:
+        inset 0 0 10px rgba(217, 164, 65, 0.18),
+        0 0 8px rgba(217, 164, 65, 0.35);
+
+    pointer-events: none;
+    z-index: 4;
+}
+
+
+/* ---------------------------------------------------------
+   LUXURY GOLD CORNER BRACKETS
+--------------------------------------------------------- */
+
+.hero-product-frame::after {
+    content: "";
+
+    position: absolute;
+
+    top: 7px;
+    left: 7px;
+    right: 7px;
+    bottom: 7px;
+
+    pointer-events: none;
+    z-index: 6;
+
+    background:
+
+        /* TOP LEFT */
+        linear-gradient(
+            90deg,
+            #fff0ad 0,
+            #f6cf72 55px,
+            transparent 55px
+        ) top left / 55px 3px no-repeat,
+
+        linear-gradient(
+            180deg,
+            #fff0ad 0,
+            #f6cf72 55px,
+            transparent 55px
+        ) top left / 3px 55px no-repeat,
+
+
+        /* TOP RIGHT */
+        linear-gradient(
+            270deg,
+            #fff0ad 0,
+            #f6cf72 55px,
+            transparent 55px
+        ) top right / 55px 3px no-repeat,
+
+        linear-gradient(
+            180deg,
+            #fff0ad 0,
+            #f6cf72 55px,
+            transparent 55px
+        ) top right / 3px 55px no-repeat,
+
+
+        /* BOTTOM LEFT */
+        linear-gradient(
+            90deg,
+            #fff0ad 0,
+            #f6cf72 55px,
+            transparent 55px
+        ) bottom left / 55px 3px no-repeat,
+
+        linear-gradient(
+            0deg,
+            #fff0ad 0,
+            #f6cf72 55px,
+            transparent 55px
+        ) bottom left / 3px 55px no-repeat,
+
+
+        /* BOTTOM RIGHT */
+        linear-gradient(
+            270deg,
+            #fff0ad 0,
+            #f6cf72 55px,
+            transparent 55px
+        ) bottom right / 55px 3px no-repeat,
+
+        linear-gradient(
+            0deg,
+            #fff0ad 0,
+            #f6cf72 55px,
+            transparent 55px
+        ) bottom right / 3px 55px no-repeat;
+
+    filter:
+        drop-shadow(0 0 4px rgba(255, 225, 140, 1))
+        drop-shadow(0 0 12px rgba(217, 164, 65, 0.8));
+}
+
+
+/* ---------------------------------------------------------
+   PRODUCT IMAGE
+   MAKE THE JAR DOMINATE THE FRAME
+--------------------------------------------------------- */
+
+.hero-product-frame img {
+    width: 100% !important;
+
+    height: 500px !important;
+
+    object-fit: cover !important;
+
+    display: block !important;
+
+    background: #030303 !important;
+
+    border: none !important;
+
+    transform: scale(1.06);
+
+    transform-origin: center center;
+
+    filter:
+        contrast(1.05)
+        saturate(1.05)
+        drop-shadow(0 10px 20px rgba(0, 0, 0, 0.75));
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ---------------------------------------------------------
+   GOLDEN AURA BEHIND PRODUCT
+--------------------------------------------------------- */
+
+.hero-product {
+    position: relative;
+}
+
+
+/* large soft golden glow */
+.hero-product::before {
+    content: "";
+
+    position: absolute;
+
+    width: 680px;
+    height: 680px;
+
+    left: 50%;
+    top: 45%;
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 196, 70, 0.20) 0%,
+            rgba(217, 164, 65, 0.12) 22%,
+            rgba(217, 164, 65, 0.06) 42%,
+            rgba(217, 164, 65, 0.02) 58%,
+            transparent 72%
+        );
+
+    filter: blur(25px);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* ---------------------------------------------------------
+   PREMIUM CAPTION
+--------------------------------------------------------- */
+
+.hero-product-frame + * {
+    position: relative;
+}
+
+
+/* ---------------------------------------------------------
+   PRODUCT LABEL
+--------------------------------------------------------- */
+
+.hero-product-frame {
+    margin-bottom: 28px !important;
+}
+
+
+/* If your caption uses this class */
+.hero-product-caption,
+.hero-product-frame + .hero-product-caption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    color: #f6cf72 !important;
+
+    font-size: 12px !important;
+    font-weight: 700 !important;
+
+    letter-spacing: 4px !important;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 6px rgba(246, 207, 114, 0.55),
+        0 0 15px rgba(217, 164, 65, 0.30);
+}
+
+
+/* Gold lines beside PREMIUM PEANUT BUTTER */
+.hero-product-caption::before,
+.hero-product-caption::after {
+    content: "";
+
+    width: 65px;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #d9a441,
+        #f6cf72
+    );
+
+    box-shadow:
+        0 0 5px rgba(246, 207, 114, 0.7);
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+--------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+
+    .hero-product-frame {
+        width: min(580px, 100%) !important;
+    }
+
+    .hero-product-frame img {
+        height: 470px !important;
+    }
+}
+
+
+@media (max-width: 850px) {
+
+    .hero-product-frame {
+        width: min(600px, 100%) !important;
+    }
+
+    .hero-product-frame img {
+        height: 460px !important;
+    }
+
+    .hero-product-frame::before {
+        top: 12px;
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero-product-frame {
+        width: 100% !important;
+        padding: 7px !important;
+    }
+
+    .hero-product-frame img {
+        height: 380px !important;
+        transform: scale(1.04);
+    }
+
+    .hero-product-caption {
+        font-size: 10px !important;
+        letter-spacing: 3px !important;
+        gap: 10px;
+    }
+
+    .hero-product-caption::before,
+    .hero-product-caption::after {
+        width: 35px;
+    }
+}

@@ -3692,3 +3692,87 @@ a[href="#products"] {
         width: 35px !important;
     }
 }
+
+/* =========================================================
+   HAROVA — FORCE VISIBLE OUTER GOLD FRAME
+========================================================= */
+
+.hero-product-frame {
+    position: relative !important;
+
+    width: 610px !important;
+    height: 560px !important;
+
+    padding: 14px !important;
+
+    margin: 0 auto !important;
+
+    background: #050505 !important;
+
+    box-sizing: border-box !important;
+
+    /* FORCE THE OUTER GOLD RECTANGLE */
+    outline: 2px solid #e8b83f !important;
+    outline-offset: 0px !important;
+
+    /* GOLD GLOW OUTSIDE THE FRAME */
+    box-shadow:
+        0 0 8px rgba(245, 195, 70, 1),
+        0 0 20px rgba(245, 195, 70, 0.65),
+        0 0 45px rgba(217, 164, 65, 0.35) !important;
+
+    overflow: visible !important;
+}
+
+
+/* Keep the photograph INSIDE the gold frame */
+.hero-product-frame img {
+    position: relative !important;
+
+    display: block !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: cover !important;
+
+    transform: none !important;
+
+    border: none !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* Remove every old decorative line */
+.hero-product-frame::before,
+.hero-product-frame::after {
+    content: none !important;
+
+    display: none !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+
+    background: none !important;
+}
+
+
+/* Remove old corner elements */
+.hero-product-frame .frame-corner,
+.hero-product-frame .top-left,
+.hero-product-frame .top-right,
+.hero-product-frame .bottom-left,
+.hero-product-frame .bottom-right {
+    display: none !important;
+
+    visibility: hidden !important;
+
+    opacity: 0 !important;
+
+    border: none !important;
+
+    width: 0 !important;
+    height: 0 !important;
+}

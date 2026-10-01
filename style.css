@@ -2838,3 +2838,34 @@ a[href="#products"] {
     content: none !important;
     display: none !important;
 }
+
+/* =========================================================
+   HAROVA — REMOVE EXTRA GENERATED CAPTION
+========================================================= */
+
+/* Remove any generated caption from the product container */
+.hero-product::after {
+    content: none !important;
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Keep the real HTML caption clean */
+.hero-product-caption {
+    display: block !important;
+    margin-top: 18px !important;
+    color: #f3d27a !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    letter-spacing: 4px !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+}
+
+/* Make sure the caption itself doesn't generate anything extra */
+.hero-product-caption::before,
+.hero-product-caption::after {
+    content: none !important;
+    display: none !important;
+}

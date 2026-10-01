@@ -3892,3 +3892,28 @@ a[href="#products"] {
     position: relative;
     z-index: 1;
 }
+
+/* =========================================================
+   HAROVA — OUTER GOLD RECTANGLE AROUND FULL IMAGE
+========================================================= */
+
+.about-image .image-frame {
+    padding: 0 !important;
+    border: 2px solid #c99a3b !important;
+    box-shadow:
+        0 0 18px rgba(201, 154, 59, 0.18),
+        0 0 35px rgba(201, 154, 59, 0.08);
+}
+
+/* Remove the inner frame completely */
+.about-image .image-frame::before {
+    display: none !important;
+}
+
+/* Full photograph stays inside the gold rectangle */
+.about-image .image-frame img {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}

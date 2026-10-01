@@ -2129,582 +2129,109 @@ a[href="#products"] {
 }
 
 /* =========================================================
-   HAROVA — SIGNATURE GOLD PRODUCT FRAME
+   HAROVA — EXTRA LARGE HERO PRODUCT
+   Match the large luxury reference composition
 ========================================================= */
 
-.hero-product-frame {
-    border: 1px solid rgba(238, 190, 82, 0.95) !important;
-
-    box-shadow:
-        0 0 8px rgba(238, 190, 82, 0.55),
-        0 0 25px rgba(217, 164, 65, 0.28),
-        0 0 55px rgba(217, 164, 65, 0.14),
-        inset 0 0 25px rgba(217, 164, 65, 0.06) !important;
-}
-
-
-/* Outer luxury frame */
-.hero-product-frame::before {
-    inset: -7px !important;
-
-    border: 1px solid rgba(217, 164, 65, 0.55) !important;
-
-    box-shadow:
-        0 0 12px rgba(217, 164, 65, 0.35),
-        0 0 35px rgba(217, 164, 65, 0.18) !important;
-}
-
-
-/* Bright gold corner accents */
-.hero-product-frame::after {
-    inset: -11px !important;
-
-    background:
-        linear-gradient(
-            90deg,
-            #ffe29a 0,
-            #ffe29a 58px,
-            transparent 58px
-        ) top left / 58px 2px no-repeat,
-
-        linear-gradient(
-            180deg,
-            #ffe29a 0,
-            #ffe29a 58px,
-            transparent 58px
-        ) top left / 2px 58px no-repeat,
-
-        linear-gradient(
-            270deg,
-            #ffe29a 0,
-            #ffe29a 58px,
-            transparent 58px
-        ) top right / 58px 2px no-repeat,
-
-        linear-gradient(
-            180deg,
-            #ffe29a 0,
-            #ffe29a 58px,
-            transparent 58px
-        ) top right / 2px 58px no-repeat,
-
-        linear-gradient(
-            90deg,
-            #ffe29a 0,
-            #ffe29a 58px,
-            transparent 58px
-        ) bottom left / 58px 2px no-repeat,
-
-        linear-gradient(
-            0deg,
-            #ffe29a 0,
-            #ffe29a 58px,
-            transparent 58px
-        ) bottom left / 2px 58px no-repeat,
-
-        linear-gradient(
-            270deg,
-            #ffe29a 0,
-            #ffe29a 58px,
-            transparent 58px
-        ) bottom right / 58px 2px no-repeat,
-
-        linear-gradient(
-            0deg,
-            #ffe29a 0,
-            #ffe29a 58px,
-            transparent 58px
-        ) bottom right / 2px 58px no-repeat;
-
-    filter:
-        drop-shadow(0 0 5px rgba(255, 210, 105, 0.85))
-        drop-shadow(0 0 14px rgba(217, 164, 65, 0.45));
-
-    pointer-events: none;
-    z-index: 5;
-}
-
-
-/* Golden halo behind the entire product */
-.hero-product::before {
-    width: 560px !important;
-    height: 560px !important;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(255, 194, 61, 0.20) 0%,
-            rgba(217, 164, 65, 0.11) 25%,
-            rgba(217, 164, 65, 0.045) 48%,
-            transparent 72%
-        ) !important;
-
-    filter: blur(25px) !important;
-}
-
-/* =========================================================
-   HAROVA — GOLDEN LUXURY FRAME FINISH
-========================================================= */
-
-.hero-product-frame {
-    border-color: #d9a441 !important;
-
-    box-shadow:
-        0 0 5px rgba(255, 215, 110, 0.75),
-        0 0 18px rgba(217, 164, 65, 0.45),
-        0 0 40px rgba(217, 164, 65, 0.20),
-        inset 0 0 18px rgba(217, 164, 65, 0.08) !important;
-}
-
-
-/* Stronger golden outer frame */
-.hero-product-frame::before {
-    inset: -6px !important;
-
-    border: 1px solid rgba(217, 164, 65, 0.65) !important;
-
-    box-shadow:
-        0 0 8px rgba(255, 210, 105, 0.55),
-        0 0 24px rgba(217, 164, 65, 0.30) !important;
-}
-
-
-/* Golden corner illumination */
-.hero-product-frame::after {
-    filter:
-        sepia(1)
-        saturate(5)
-        hue-rotate(345deg)
-        brightness(1.25)
-        drop-shadow(0 0 5px rgba(255, 210, 105, 0.9))
-        drop-shadow(0 0 15px rgba(217, 164, 65, 0.5)) !important;
-}
-
-
-/* Extra golden aura around the product */
 .hero-product {
-    filter: none;
+    transform: scale(1.12);
+    transform-origin: center center;
 }
 
-.hero-product::before {
-    width: 620px !important;
-    height: 620px !important;
 
-    background:
-        radial-gradient(
-            circle,
-            rgba(255, 193, 58, 0.16) 0%,
-            rgba(217, 164, 65, 0.09) 28%,
-            rgba(217, 164, 65, 0.035) 50%,
-            transparent 72%
-        ) !important;
-
-   /* =========================================================
-   HAROVA — PURE GOLD FRAME CORNERS
-========================================================= */
-
-.hero-product-frame::after {
-    inset: -11px !important;
-
-    background:
-        /* TOP LEFT */
-        linear-gradient(
-            90deg,
-            #f6cf72 0,
-            #d9a441 60px,
-            transparent 60px
-        ) top left / 60px 2px no-repeat,
-
-        linear-gradient(
-            180deg,
-            #f6cf72 0,
-            #d9a441 60px,
-            transparent 60px
-        ) top left / 2px 60px no-repeat,
-
-        /* TOP RIGHT */
-        linear-gradient(
-            270deg,
-            #f6cf72 0,
-            #d9a441 60px,
-            transparent 60px
-        ) top right / 60px 2px no-repeat,
-
-        linear-gradient(
-            180deg,
-            #f6cf72 0,
-            #d9a441 60px,
-            transparent 60px
-        ) top right / 2px 60px no-repeat,
-
-        /* BOTTOM LEFT */
-        linear-gradient(
-            90deg,
-            #f6cf72 0,
-            #d9a441 60px,
-            transparent 60px
-        ) bottom left / 60px 2px no-repeat,
-
-        linear-gradient(
-            0deg,
-            #f6cf72 0,
-            #d9a441 60px,
-            transparent 60px
-        ) bottom left / 2px 60px no-repeat,
-
-        /* BOTTOM RIGHT */
-        linear-gradient(
-            270deg,
-            #f6cf72 0,
-            #d9a441 60px,
-            transparent 60px
-        ) bottom right / 60px 2px no-repeat,
-
-        linear-gradient(
-            0deg,
-            #f6cf72 0,
-            #d9a441 60px,
-            transparent 60px
-        ) bottom right / 2px 60px no-repeat;
-
-    filter:
-        drop-shadow(0 0 4px rgba(246, 207, 114, 0.95))
-        drop-shadow(0 0 12px rgba(217, 164, 65, 0.55));
-
-    pointer-events: none;
-    z-index: 5;
-}
-
-    filter: blur(28px) !important;
-}
-
-/* =========================================================
-   HAROVA — PREMIUM PRODUCT DISPLAY
-   GOLD LUXURY FRAME / LARGE JAR
-========================================================= */
-
-/* Main product area */
+/* Bigger luxury frame */
 .hero-product-frame {
-    position: relative !important;
-    width: min(620px, 100%) !important;
-
+    width: min(680px, 100%) !important;
     padding: 10px !important;
 
-    background: #050505 !important;
-
-    border: 2px solid #d9a441 !important;
-
     box-shadow:
-        0 0 6px rgba(255, 220, 120, 0.95),
-        0 0 18px rgba(217, 164, 65, 0.75),
-        0 0 45px rgba(217, 164, 65, 0.35),
-        0 0 90px rgba(217, 164, 65, 0.16) !important;
-
-    overflow: visible !important;
+        0 0 8px rgba(255, 225, 140, 1),
+        0 0 22px rgba(217, 164, 65, 0.85),
+        0 0 50px rgba(217, 164, 65, 0.45),
+        0 0 100px rgba(217, 164, 65, 0.18) !important;
 }
 
 
-/* ---------------------------------------------------------
-   SECOND INNER GOLD FRAME
---------------------------------------------------------- */
-
-.hero-product-frame::before {
-    content: "";
-    position: absolute;
-
-    top: 14px;
-    left: 14px;
-    right: 14px;
-    bottom: 14px;
-
-    border: 1px solid rgba(246, 207, 114, 0.85);
-
-    box-shadow:
-        inset 0 0 10px rgba(217, 164, 65, 0.18),
-        0 0 8px rgba(217, 164, 65, 0.35);
-
-    pointer-events: none;
-    z-index: 4;
-}
-
-
-/* ---------------------------------------------------------
-   LUXURY GOLD CORNER BRACKETS
---------------------------------------------------------- */
-
-.hero-product-frame::after {
-    content: "";
-
-    position: absolute;
-
-    top: 7px;
-    left: 7px;
-    right: 7px;
-    bottom: 7px;
-
-    pointer-events: none;
-    z-index: 6;
-
-    background:
-
-        /* TOP LEFT */
-        linear-gradient(
-            90deg,
-            #fff0ad 0,
-            #f6cf72 55px,
-            transparent 55px
-        ) top left / 55px 3px no-repeat,
-
-        linear-gradient(
-            180deg,
-            #fff0ad 0,
-            #f6cf72 55px,
-            transparent 55px
-        ) top left / 3px 55px no-repeat,
-
-
-        /* TOP RIGHT */
-        linear-gradient(
-            270deg,
-            #fff0ad 0,
-            #f6cf72 55px,
-            transparent 55px
-        ) top right / 55px 3px no-repeat,
-
-        linear-gradient(
-            180deg,
-            #fff0ad 0,
-            #f6cf72 55px,
-            transparent 55px
-        ) top right / 3px 55px no-repeat,
-
-
-        /* BOTTOM LEFT */
-        linear-gradient(
-            90deg,
-            #fff0ad 0,
-            #f6cf72 55px,
-            transparent 55px
-        ) bottom left / 55px 3px no-repeat,
-
-        linear-gradient(
-            0deg,
-            #fff0ad 0,
-            #f6cf72 55px,
-            transparent 55px
-        ) bottom left / 3px 55px no-repeat,
-
-
-        /* BOTTOM RIGHT */
-        linear-gradient(
-            270deg,
-            #fff0ad 0,
-            #f6cf72 55px,
-            transparent 55px
-        ) bottom right / 55px 3px no-repeat,
-
-        linear-gradient(
-            0deg,
-            #fff0ad 0,
-            #f6cf72 55px,
-            transparent 55px
-        ) bottom right / 3px 55px no-repeat;
-
-    filter:
-        drop-shadow(0 0 4px rgba(255, 225, 140, 1))
-        drop-shadow(0 0 12px rgba(217, 164, 65, 0.8));
-}
-
-
-/* ---------------------------------------------------------
-   PRODUCT IMAGE
-   MAKE THE JAR DOMINATE THE FRAME
---------------------------------------------------------- */
-
+/* Make the product image much taller */
 .hero-product-frame img {
-    width: 100% !important;
-
-    height: 500px !important;
+    height: 560px !important;
 
     object-fit: cover !important;
 
-    display: block !important;
-
-    background: #030303 !important;
-
-    border: none !important;
-
-    transform: scale(1.06);
+    transform: scale(1.08) !important;
 
     transform-origin: center center;
-
-    filter:
-        contrast(1.05)
-        saturate(1.05)
-        drop-shadow(0 10px 20px rgba(0, 0, 0, 0.75));
-
-    position: relative;
-    z-index: 2;
 }
 
 
-/* ---------------------------------------------------------
-   GOLDEN AURA BEHIND PRODUCT
---------------------------------------------------------- */
-
-.hero-product {
-    position: relative;
-}
-
-
-/* large soft golden glow */
+/* Stronger golden atmosphere */
 .hero-product::before {
-    content: "";
-
-    position: absolute;
-
-    width: 680px;
-    height: 680px;
-
-    left: 50%;
-    top: 45%;
-
-    transform: translate(-50%, -50%);
+    width: 760px !important;
+    height: 760px !important;
 
     background:
         radial-gradient(
             circle,
-            rgba(255, 196, 70, 0.20) 0%,
-            rgba(217, 164, 65, 0.12) 22%,
-            rgba(217, 164, 65, 0.06) 42%,
-            rgba(217, 164, 65, 0.02) 58%,
-            transparent 72%
-        );
+            rgba(255, 195, 65, 0.22) 0%,
+            rgba(217, 164, 65, 0.13) 25%,
+            rgba(217, 164, 65, 0.055) 45%,
+            transparent 70%
+        ) !important;
 
-    filter: blur(25px);
-
-    pointer-events: none;
-
-    z-index: 0;
+    filter: blur(30px) !important;
 }
 
 
-/* ---------------------------------------------------------
-   PREMIUM CAPTION
---------------------------------------------------------- */
-
-.hero-product-frame + * {
-    position: relative;
+/* More impressive gold corners */
+.hero-product-frame::after {
+    filter:
+        drop-shadow(0 0 5px rgba(255, 225, 140, 1))
+        drop-shadow(0 0 14px rgba(217, 164, 65, 0.9))
+        drop-shadow(0 0 30px rgba(217, 164, 65, 0.45)) !important;
 }
 
 
-/* ---------------------------------------------------------
-   PRODUCT LABEL
---------------------------------------------------------- */
-
+/* Caption sits nicely below the larger frame */
 .hero-product-frame {
-    margin-bottom: 28px !important;
+    margin-bottom: 30px !important;
 }
 
 
-/* If your caption uses this class */
-.hero-product-caption,
-.hero-product-frame + .hero-product-caption {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-
-    color: #f6cf72 !important;
-
-    font-size: 12px !important;
-    font-weight: 700 !important;
-
-    letter-spacing: 4px !important;
-
-    text-transform: uppercase;
-
-    text-shadow:
-        0 0 6px rgba(246, 207, 114, 0.55),
-        0 0 15px rgba(217, 164, 65, 0.30);
+/* Desktop */
+@media (min-width: 1200px) {
+    .hero-product {
+        transform: scale(1.15);
+    }
 }
 
 
-/* Gold lines beside PREMIUM PEANUT BUTTER */
-.hero-product-caption::before,
-.hero-product-caption::after {
-    content: "";
-
-    width: 65px;
-    height: 1px;
-
-    background: linear-gradient(
-        90deg,
-        transparent,
-        #d9a441,
-        #f6cf72
-    );
-
-    box-shadow:
-        0 0 5px rgba(246, 207, 114, 0.7);
-}
-
-
-/* ---------------------------------------------------------
-   RESPONSIVE
---------------------------------------------------------- */
-
+/* Tablet */
 @media (max-width: 1100px) {
+    .hero-product {
+        transform: scale(1.05);
+    }
 
     .hero-product-frame {
-        width: min(580px, 100%) !important;
+        width: min(620px, 100%) !important;
     }
 
     .hero-product-frame img {
-        height: 470px !important;
+        height: 500px !important;
     }
 }
 
 
+/* Mobile */
 @media (max-width: 850px) {
+    .hero-product {
+        transform: none;
+    }
 
     .hero-product-frame {
-        width: min(600px, 100%) !important;
+        width: 100% !important;
     }
 
     .hero-product-frame img {
         height: 460px !important;
-    }
-
-    .hero-product-frame::before {
-        top: 12px;
-        left: 12px;
-        right: 12px;
-        bottom: 12px;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    .hero-product-frame {
-        width: 100% !important;
-        padding: 7px !important;
-    }
-
-    .hero-product-frame img {
-        height: 380px !important;
-        transform: scale(1.04);
-    }
-
-    .hero-product-caption {
-        font-size: 10px !important;
-        letter-spacing: 3px !important;
-        gap: 10px;
-    }
-
-    .hero-product-caption::before,
-    .hero-product-caption::after {
-        width: 35px;
     }
 }

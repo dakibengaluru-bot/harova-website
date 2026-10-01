@@ -4087,3 +4087,66 @@ a[href="#products"] {
 
     background: #050505 !important;
 }
+
+/* =========================================
+   HAROVA - REAL FLAVOUR IMAGES
+   ========================================= */
+
+.flavour-image {
+    width: 150px;
+    height: 120px;
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.flavour-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    filter:
+        drop-shadow(0 0 6px rgba(217, 170, 69, 0.35))
+        drop-shadow(0 0 18px rgba(217, 170, 69, 0.18));
+
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+.flavour-item:hover .flavour-image img {
+    transform: scale(1.08);
+
+    filter:
+        drop-shadow(0 0 8px rgba(217, 170, 69, 0.55))
+        drop-shadow(0 0 24px rgba(217, 170, 69, 0.30));
+}
+
+
+/* Keep the flavour columns aligned */
+
+.flavour-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .flavour-image {
+        width: 120px;
+        height: 100px;
+        margin-bottom: 14px;
+    }
+
+}

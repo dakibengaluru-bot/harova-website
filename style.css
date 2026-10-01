@@ -2127,3 +2127,117 @@ a[href="#products"] {
         width: 30px;
     }
 }
+
+/* =========================================================
+   HAROVA — SIGNATURE GOLD PRODUCT FRAME
+========================================================= */
+
+.hero-product-frame {
+    border: 1px solid rgba(238, 190, 82, 0.95) !important;
+
+    box-shadow:
+        0 0 8px rgba(238, 190, 82, 0.55),
+        0 0 25px rgba(217, 164, 65, 0.28),
+        0 0 55px rgba(217, 164, 65, 0.14),
+        inset 0 0 25px rgba(217, 164, 65, 0.06) !important;
+}
+
+
+/* Outer luxury frame */
+.hero-product-frame::before {
+    inset: -7px !important;
+
+    border: 1px solid rgba(217, 164, 65, 0.55) !important;
+
+    box-shadow:
+        0 0 12px rgba(217, 164, 65, 0.35),
+        0 0 35px rgba(217, 164, 65, 0.18) !important;
+}
+
+
+/* Bright gold corner accents */
+.hero-product-frame::after {
+    inset: -11px !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffe29a 0,
+            #ffe29a 58px,
+            transparent 58px
+        ) top left / 58px 2px no-repeat,
+
+        linear-gradient(
+            180deg,
+            #ffe29a 0,
+            #ffe29a 58px,
+            transparent 58px
+        ) top left / 2px 58px no-repeat,
+
+        linear-gradient(
+            270deg,
+            #ffe29a 0,
+            #ffe29a 58px,
+            transparent 58px
+        ) top right / 58px 2px no-repeat,
+
+        linear-gradient(
+            180deg,
+            #ffe29a 0,
+            #ffe29a 58px,
+            transparent 58px
+        ) top right / 2px 58px no-repeat,
+
+        linear-gradient(
+            90deg,
+            #ffe29a 0,
+            #ffe29a 58px,
+            transparent 58px
+        ) bottom left / 58px 2px no-repeat,
+
+        linear-gradient(
+            0deg,
+            #ffe29a 0,
+            #ffe29a 58px,
+            transparent 58px
+        ) bottom left / 2px 58px no-repeat,
+
+        linear-gradient(
+            270deg,
+            #ffe29a 0,
+            #ffe29a 58px,
+            transparent 58px
+        ) bottom right / 58px 2px no-repeat,
+
+        linear-gradient(
+            0deg,
+            #ffe29a 0,
+            #ffe29a 58px,
+            transparent 58px
+        ) bottom right / 2px 58px no-repeat;
+
+    filter:
+        drop-shadow(0 0 5px rgba(255, 210, 105, 0.85))
+        drop-shadow(0 0 14px rgba(217, 164, 65, 0.45));
+
+    pointer-events: none;
+    z-index: 5;
+}
+
+
+/* Golden halo behind the entire product */
+.hero-product::before {
+    width: 560px !important;
+    height: 560px !important;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 194, 61, 0.20) 0%,
+            rgba(217, 164, 65, 0.11) 25%,
+            rgba(217, 164, 65, 0.045) 48%,
+            transparent 72%
+        ) !important;
+
+    filter: blur(25px) !important;
+}

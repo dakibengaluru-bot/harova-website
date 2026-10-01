@@ -3776,3 +3776,75 @@ a[href="#products"] {
     width: 0 !important;
     height: 0 !important;
 }
+
+/* =========================================================
+   HAROVA — PREMIUM ABOUT SECTION SPACING
+   REMOVE EXCESSIVE TOP & BOTTOM GAPS
+========================================================= */
+
+.about-section {
+    padding: 65px 30px !important;
+}
+
+
+/* Keep the two sides nicely aligned */
+.about-grid {
+    align-items: center;
+}
+
+
+/* Slightly tighten the image */
+.image-frame {
+    padding: 10px;
+}
+
+
+/* Reduce unnecessary space around the image */
+.image-frame img {
+    height: 400px;
+}
+
+
+/* Keep text compact and premium */
+.about-content h2 {
+    margin-bottom: 22px;
+}
+
+
+.about-content p {
+    margin-bottom: 13px;
+}
+
+
+/* Reduce gap before Discover Harova */
+.text-button {
+    margin-top: 7px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .about-section {
+        padding: 55px 25px !important;
+    }
+
+    .about-grid {
+        gap: 35px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .about-section {
+        padding: 45px 20px !important;
+    }
+
+    .about-grid {
+        gap: 30px;
+    }
+}

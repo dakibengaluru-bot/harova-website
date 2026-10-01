@@ -4238,3 +4238,20 @@ a[href="#products"] {
     margin-left: auto !important;
     margin-right: auto !important;
 }
+
+/* =========================================
+   HAROVA FOOTER LOGO
+   ========================================= */
+
+.footer-logo img {
+    width: 150px !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+}
+
+.footer-logo {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+}

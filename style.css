@@ -3863,3 +3863,32 @@ a[href="#products"] {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
 }
+
+/* =========================================================
+   HAROVA — PREMIUM ABOUT IMAGE FRAME
+========================================================= */
+
+.about-image .image-frame {
+    position: relative;
+    padding: 10px;
+    border: 1px solid rgba(218, 170, 72, 0.75);
+    box-shadow:
+        0 0 0 1px rgba(218, 170, 72, 0.12),
+        0 0 25px rgba(218, 170, 72, 0.10);
+}
+
+/* Inner luxury frame */
+.about-image .image-frame::before {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border: 1px solid rgba(218, 170, 72, 0.35);
+    pointer-events: none;
+}
+
+/* Keep the photograph clean */
+.about-image .image-frame img {
+    display: block;
+    position: relative;
+    z-index: 1;
+}

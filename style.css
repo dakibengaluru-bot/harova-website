@@ -4003,3 +4003,34 @@ a[href="#products"] {
     object-fit: contain !important;
     background: #050505 !important;
 }
+
+/* =========================================================
+   HAROVA — OUTER GOLD RECTANGLE
+========================================================= */
+
+.about-image .image-frame {
+    position: relative !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+
+    /* Gold rectangle outside the complete image */
+    outline: 2px solid #d4a64a !important;
+    outline-offset: 12px !important;
+}
+
+/* Remove all previous frame effects */
+.about-image .image-frame::before,
+.about-image .image-frame::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Keep the current image exactly as it is */
+.about-image .image-frame img {
+    display: block !important;
+    width: 100% !important;
+    height: 420px !important;
+    object-fit: contain !important;
+    background: #050505 !important;
+}

@@ -4262,3 +4262,8 @@ a[href="#products"] {
     height: auto !important;
     object-fit: contain !important;
 }
+
+/* FOOTER TAGLINE - GOLD */
+.footer-brand p {
+    color: #d9aa45 !important;
+}

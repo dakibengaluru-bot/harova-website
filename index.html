@@ -655,7 +655,33 @@
      CONTACT
 ========================================================= -->
 
-<section id="contact" class="contact-section">
+<!-- =========================================================
+     HAROVA SHOPPING CART
+========================================================= -->
+<section id="shopping-cart" class="cart-section">
+    <div class="cart-inner">
+        <p class="section-label">YOUR HAROVA SELECTION</p>
+        <div class="gold-line"></div>
+        <h2>Your Shopping Cart</h2>
+
+        <div id="cart-items">
+            <p class="cart-empty">Your cart is currently empty.</p>
+        </div>
+
+        <div class="cart-summary">
+            <p>Subtotal: <strong id="cart-total">₹0</strong></p>
+            <button
+                type="button"
+                id="checkout-button"
+                class="product-button"
+                onclick="checkoutWithRazorpay()"
+                disabled>
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+</section>
+    <section id="contact" class="contact-section">
 
     <div class="contact-inner">
 

@@ -4385,14 +4385,10 @@ a[href="#products"] {
     color: #050505;
 }
 
-.cart-dropdown[hidden] {
-    display: none !important;
-}
-
 .cart-dropdown {
-    position: absolute;
-    top: calc(100% + 12px);
-    right: 0px;
+    position: fixed !important;
+    top: 100px !important;
+    right: 25px !important;
     width: 350px;
     max-width: calc(100vw - 30px);
     background: #111;
@@ -4400,8 +4396,12 @@ a[href="#products"] {
     border: 1px solid #d9aa45;
     border-radius: 8px;
     padding: 20px;
-    z-index: 9999;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    z-index: 2147483647 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.cart-dropdown[hidden] {
+    display: none !important;
 }
 
 .cart-dropdown-header,

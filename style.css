@@ -4360,3 +4360,103 @@ a[href="#products"] {
         text-align: left;
     }
 }
+
+/* HAROVA HEADER CART */
+.header-cart-button {
+    position: relative;
+    background: transparent;
+    border: 1px solid #d9aa45;
+    color: #d9aa45;
+    padding: 10px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 16px;
+}
+
+.header-cart-button:hover {
+    background: #d9aa45;
+    color: #050505;
+}
+
+.cart-dropdown[hidden] {
+    display: none !important;
+}
+
+.cart-dropdown {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 350px;
+    max-width: calc(100vw - 30px);
+    background: #111;
+    color: #fff;
+    border: 1px solid #d9aa45;
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 9999;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.cart-dropdown-header,
+.cart-dropdown-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.cart-dropdown-header h3 {
+    color: #d9aa45;
+    margin: 0;
+}
+
+.cart-dropdown-header button,
+.header-cart-item button {
+    background: transparent;
+    color: #d9aa45;
+    border: 1px solid #d9aa45;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#header-cart-items {
+    margin: 18px 0;
+}
+
+.header-cart-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #444;
+}
+
+.header-cart-item strong,
+.cart-dropdown-footer strong {
+    color: #d9aa45;
+}
+
+.cart-dropdown-footer {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.cart-dropdown-footer p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-dropdown-footer .product-button {
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .cart-dropdown {
+        right: 0;
+        width: 310px;
+    }
+}

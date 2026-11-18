@@ -4598,3 +4598,38 @@ a[href="#products"] {
     }
 }
 
+
+/* HAROVA CART REMOVE BUTTON */
+
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.cart-item-controls button {
+    background: transparent;
+    color: #d9aa45;
+    border: 1px solid #d9aa45;
+    padding: 7px 12px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.cart-item-controls button:hover {
+    background: #d9aa45;
+    color: #080808;
+}
+
+.cart-item-controls .cart-remove-button {
+    color: #ff7777;
+    border-color: #a94444;
+    font-size: 12px;
+    padding: 7px 10px;
+}
+
+.cart-item-controls .cart-remove-button:hover {
+    background: #a94444;
+    color: white;
+}

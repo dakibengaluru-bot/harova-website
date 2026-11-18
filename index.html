@@ -999,29 +999,27 @@ function changeCartQuantity(index, change) {
 }
 
 
+
 function toggleCart() {
     const dropdown = document.getElementById("cart-dropdown");
 
-    // Move the dropdown directly under BODY
-    // so it is no longer trapped in the header's stacking context.
+    // Keep the dropdown directly under BODY
     if (dropdown.parentElement !== document.body) {
         document.body.appendChild(dropdown);
     }
 
-    // Position it above the page content.
+    // Keep the dropdown above all page sections
     dropdown.style.setProperty("position", "fixed", "important");
     dropdown.style.setProperty("top", "100px", "important");
     dropdown.style.setProperty("right", "25px", "important");
     dropdown.style.setProperty("z-index", "2147483647", "important");
 
-    // Toggle visibility.
+    // Open or close the cart
     dropdown.hidden = !dropdown.hidden;
 
     if (!dropdown.hidden) {
         updateHeaderCart();
     }
-}
-
 }
 
 function updateHeaderCart() {

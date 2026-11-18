@@ -40,7 +40,36 @@
         <a href="#products" class="shop-button">
             Shop Now
         </a>
+<button
+    type="button"
+    class="header-cart-button"
+    onclick="toggleCart()"
+    aria-label="Open shopping cart">
+    <span class="cart-icon">🛒</span>
+    <span id="header-cart-count">0</span>
+</button>
+        <div id="cart-dropdown" class="cart-dropdown" hidden>
+    <div class="cart-dropdown-header">
+        <h3>Your Shopping Cart</h3>
+        <button type="button" onclick="toggleCart()">×</button>
+    </div>
 
+    <div id="header-cart-items">
+        <p>Your cart is currently empty.</p>
+    </div>
+
+    <div class="cart-dropdown-footer">
+        <p>Subtotal: <strong id="header-cart-total">₹0</strong></p>
+        <button
+            type="button"
+            class="product-button"
+            id="header-checkout-button"
+            onclick="checkoutWithRazorpay()"
+            disabled>
+            Proceed to Checkout
+        </button>
+    </div>
+</div>
         <button class="menu-button" onclick="toggleMenu()" aria-label="Open menu">
             ☰
         </button>
@@ -909,8 +938,7 @@ function addToCart(product, price, size) {
 
     renderHarovaCart();
 
-    document.getElementById("shopping-cart")
-        .scrollIntoView({ behavior: "smooth" });
+   updateHeaderCart();
 }
 
 function renderHarovaCart() {
@@ -976,8 +1004,76 @@ function changeCartQuantity(index, change) {
     }
 
     renderHarovaCart();
+    updateHeaderCart();
 }
 
+    function toggleCart() {
+    const dropdown = document.getElementById("cart-dropdown");
+    dropdown.hidden = !dropdown.hidden;
+
+    if (!dropdown.hidden) {
+        updateHeaderCart();
+    }
+}
+
+function updateHeaderCart() {
+    const countElement = document.getElementById("header-cart-count");
+    const itemsContainer = document.getElementById("header-cart-items");
+    const totalElement = document.getElementById("header-cart-total");
+    const checkoutButton = document.getElementById("header-checkout-button");
+
+    const count = harovaCart.reduce(
+        (sum, item) => sum + item.quantity, 0
+    );
+
+    const total = harovaCart.reduce(
+        (sum, item) => sum + item.price * item.quantity, 0
+    );
+
+    countElement.textContent = count;
+    totalElement.textContent = "₹" + total;
+    checkoutButton.disabled = harovaCart.length === 0;
+
+    itemsContainer.replaceChildren();
+
+    if (harovaCart.length === 0) {
+        const emptyMessage = document.createElement("p");
+        emptyMessage.textContent = "Your cart is currently empty.";
+        itemsContainer.appendChild(emptyMessage);
+        return;
+    }
+
+    harovaCart.forEach((item, index) => {
+        const row = document.createElement("div");
+        row.className = "header-cart-item";
+
+        const details = document.createElement("span");
+        details.textContent =
+            item.product + " - " + item.size + " × " + item.quantity;
+
+        const price = document.createElement("strong");
+        price.textContent = "₹" + (item.price * item.quantity);
+
+        row.append(details, price);
+
+        const controls = document.createElement("div");
+
+        const minus = document.createElement("button");
+        minus.type = "button";
+        minus.textContent = "−";
+        minus.onclick = () => changeCartQuantity(index, -1);
+
+        const plus = document.createElement("button");
+        plus.type = "button";
+        plus.textContent = "+";
+        plus.onclick = () => changeCartQuantity(index, 1);
+
+        controls.append(minus, plus);
+        row.appendChild(controls);
+        itemsContainer.appendChild(row);
+    });
+}
+    
 // Checkout will be connected in the next step.
 
     

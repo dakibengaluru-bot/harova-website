@@ -4466,36 +4466,40 @@ a[href="#products"] {
 }
 
 
-/* HAROVA Product Size Selection */
+
+/* HAROVA Compact Product Size Buttons */
 
 .product-size-options {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    margin: 20px 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 5px;
+    margin: 14px 0;
+    width: 100%;
 }
 
 .size-option {
+    min-width: 0;
     background: #171717;
     color: #ffffff;
     border: 1px solid #555555;
-    border-radius: 6px;
-    padding: 12px 5px;
+    border-radius: 5px;
+    padding: 8px 3px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
+    justify-content: center;
+    gap: 4px;
     transition: all 0.2s ease;
 }
 
 .size-option span {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
 }
 
 .size-option strong {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .size-option.selected {
@@ -4507,4 +4511,3 @@ a[href="#products"] {
 .size-option:hover {
     border-color: #d9aa45;
 }
-

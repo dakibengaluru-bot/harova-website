@@ -4540,3 +4540,56 @@ a[href="#products"] {
         grid-template-columns: 1fr;
     }
 }
+
+
+
+/* HAROVA PRODUCTS SECTION HEADING */
+
+.products-heading {
+    text-align: center;
+    padding: 55px 20px 35px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.products-heading .section-eyebrow {
+    color: #d9aa45;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.products-heading h2 {
+    color: #f5ead4;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-weight: normal;
+    margin: 0 0 12px;
+}
+
+.products-heading .section-subtitle {
+    color: #b7a98d;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.products-heading .heading-divider {
+    width: 55px;
+    height: 1px;
+    background: #d9aa45;
+    margin: 25px auto 0;
+}
+
+@media (max-width: 600px) {
+    .products-heading {
+        padding: 40px 15px 28px;
+    }
+
+    .products-heading h2 {
+        font-size: 28px;
+    }
+}
+

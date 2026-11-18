@@ -4389,9 +4389,9 @@ a[href="#products"] {
 }
 
 .cart-dropdown {
-    position: fixed;
-    top: 175px;
-    right: 20px;
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0px;
     width: 350px;
     max-width: calc(100vw - 30px);
     background: #111;

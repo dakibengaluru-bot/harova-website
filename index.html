@@ -471,64 +471,76 @@
 
 
 
-        <!-- CHOCOLATE CREAMY -->
 
-        <article class="product-card">
+<!-- CHOCOLATE CREAMY -->
 
-            <div class="product-image">
+<article class="product-card">
 
-                <img src="choc_creamy_jar.png"
-                     alt="Harova Chocolate Creamy Peanut Butter">
+    <div class="product-image">
+        <img src="choc_creamy_jar.png"
+             alt="Harova Chocolate Creamy Peanut Butter">
+    </div>
 
-            </div>
+    <div class="product-content">
 
-            <div class="product-content">
+        <p class="product-number">03</p>
 
-                <p class="product-number">03</p>
+        <h3>Chocolate Creamy</h3>
 
-                <h3>Chocolate Creamy</h3>
+        <p class="product-description">
+            Rich Cocoa &amp; Smooth
+        </p>
 
-                <p class="product-description">
-                    Rich Cocoa &amp; Smooth
-                </p>
+        <div class="product-divider"></div>
 
-                <div class="product-divider"></div>
+        <!-- Size Selection Buttons -->
+        <div class="product-size-options">
 
-                <div class="price-row">
-                    <span>200g</span>
-                    <strong>₹169</strong>
-                </div>
+            <button type="button"
+                class="size-option selected"
+                data-size="200g"
+                data-price="169"
+                onclick="selectProductSize(this)">
+                <span>200g</span>
+                <strong>₹169</strong>
+            </button>
 
-                <div class="price-row">
-                    <span>500g</span>
-                    <strong>₹369</strong>
-                </div>
+            <button type="button"
+                class="size-option"
+                data-size="500g"
+                data-price="369"
+                onclick="selectProductSize(this)">
+                <span>500g</span>
+                <strong>₹369</strong>
+            </button>
 
-                <div class="price-row">
-                    <span>1kg</span>
-                    <strong>₹599</strong>
-                </div>
+            <button type="button"
+                class="size-option"
+                data-size="1kg"
+                data-price="599"
+                onclick="selectProductSize(this)">
+                <span>1kg</span>
+                <strong>₹599</strong>
+            </button>
 
-                <select class="product-size" id="size-choc-creamy">
-    <option value="169" data-size="200g">200g - ₹169</option>
-    <option value="369" data-size="500g">500g - ₹369</option>
-    <option value="599" data-size="1kg">1kg - ₹599</option>
-</select>
+        </div>
 
-<button
-    type="button"
-    class="product-button"
-    onclick="addToCart(
-        'Chocolate Creamy',
-        this.previousElementSibling.value,
-        this.previousElementSibling.selectedOptions[0].dataset.size
-    )">
-    Add to Cart
-</button>
+        <!-- Add to Cart -->
+        <button
+            type="button"
+            class="product-button"
+            onclick="addToCart(
+                'Chocolate Creamy',
+                this.closest('.product-content').querySelector('.size-option.selected').dataset.price,
+                this.closest('.product-content').querySelector('.size-option.selected').dataset.size
+            )">
+            Add to Cart
+        </button>
 
-            </div>
+    </div>
 
-        </article>
+</article>
+
 
 
         <!-- CHOCOLATE CRUNCHY -->

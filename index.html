@@ -19,63 +19,84 @@
      HEADER
 ========================================================= -->
 
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
 <header class="site-header">
 
-<div class="header-inner" style="position: relative;">
+    <div class="header-inner" style="position: relative;">
+
+        <!-- Brand Logo -->
         <a href="#home" class="brand">
             <img src="harovalogo1.png" alt="Harova">
         </a>
 
+        <!-- Navigation -->
         <nav class="navigation">
-
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#products">Products</a>
             <a href="#benefits">Benefits</a>
             <a href="#contact">Contact</a>
-
         </nav>
 
+        <!-- Shop Now -->
         <a href="#products" class="shop-button">
             Shop Now
         </a>
-<button
-    type="button"
-    class="header-cart-button"
-    onclick="toggleCart()"
-    aria-label="Open shopping cart">
-    <span class="cart-icon">🛒</span>
-    <span id="header-cart-count">0</span>
-</button>
-        <div id="cart-dropdown" class="cart-dropdown" hidden>
-    <div class="cart-dropdown-header">
-        <h3>Your Shopping Cart</h3>
-        <button type="button" onclick="toggleCart()">×</button>
-    </div>
 
-    <div id="header-cart-items">
-        <p>Your cart is currently empty.</p>
-    </div>
-
-    <div class="cart-dropdown-footer">
-        <p>Subtotal: <strong id="header-cart-total">₹0</strong></p>
+        <!-- Cart Button -->
         <button
             type="button"
-            class="product-button"
-            id="header-checkout-button"
-            onclick="checkoutWithRazorpay()"
-            disabled>
-            Proceed to Checkout
+            class="header-cart-button"
+            onclick="toggleCart()"
+            aria-label="Open shopping cart">
+
+            <span class="cart-icon">🛒</span>
+            <span id="header-cart-count">0</span>
         </button>
-    </div>
-</div>
-        <button class="menu-button" onclick="toggleMenu()" aria-label="Open menu">
+
+        <!-- Mobile Menu -->
+        <button
+            class="menu-button"
+            onclick="toggleMenu()"
+            aria-label="Open menu">
             ☰
         </button>
 
     </div>
 
+    <!-- Cart Dropdown - Outside header-inner -->
+    <div id="cart-dropdown" class="cart-dropdown" hidden>
+
+        <div class="cart-dropdown-header">
+            <h3>Your Shopping Cart</h3>
+            <button type="button" onclick="toggleCart()">×</button>
+        </div>
+
+        <div id="header-cart-items">
+            <p>Your cart is currently empty.</p>
+        </div>
+
+        <div class="cart-dropdown-footer">
+            <p>Subtotal: <strong id="header-cart-total">₹0</strong></p>
+
+            <button
+                type="button"
+                class="product-button"
+                id="header-checkout-button"
+                onclick="checkoutWithRazorpay()"
+                disabled>
+                Proceed to Checkout
+            </button>
+        </div>
+
+    </div>
+
 </header>
+
 
 
 <!-- =========================================================

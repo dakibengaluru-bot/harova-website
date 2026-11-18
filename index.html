@@ -917,7 +917,16 @@ function addToCart(product, price, size) {
 
    updateHeaderCart();
 }
+function selectProductSize(button) {
+    const productContent = button.closest(".product-content");
 
+    productContent.querySelectorAll(".size-option").forEach(option => {
+        option.classList.remove("selected");
+    });
+
+    button.classList.add("selected");
+}
+    
 function renderHarovaCart() {
     const container = document.getElementById("cart-items");
     const totalElement = document.getElementById("cart-total");

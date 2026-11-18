@@ -4545,11 +4545,14 @@ a[href="#products"] {
 
 /* HAROVA PRODUCTS SECTION HEADING */
 
+
 .products-heading {
-    text-align: center;
-    padding: 55px 20px 35px;
+    display: block;
     width: 100%;
+    text-align: center;
+    padding: 55px 20px 40px;
     box-sizing: border-box;
+    grid-column: 1 / -1;
 }
 
 .products-heading .section-eyebrow {
@@ -4572,7 +4575,6 @@ a[href="#products"] {
 .products-heading .section-subtitle {
     color: #b7a98d;
     font-size: 13px;
-    letter-spacing: 0.5px;
     margin: 0;
 }
 

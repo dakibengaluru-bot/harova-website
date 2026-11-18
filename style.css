@@ -4464,3 +4464,47 @@ a[href="#products"] {
         width: 310px;
     }
 }
+
+
+/* HAROVA Product Size Selection */
+
+.product-size-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.size-option {
+    background: #171717;
+    color: #ffffff;
+    border: 1px solid #555555;
+    border-radius: 6px;
+    padding: 12px 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.size-option span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.size-option strong {
+    font-size: 14px;
+}
+
+.size-option.selected {
+    background: #245b36;
+    border: 2px solid #d9aa45;
+    color: #ffffff;
+}
+
+.size-option:hover {
+    border-color: #d9aa45;
+}
+

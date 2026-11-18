@@ -1064,6 +1064,7 @@ function toggleCart() {
     }
 }
 
+
 function updateHeaderCart() {
     const countElement = document.getElementById("header-cart-count");
     const itemsContainer = document.getElementById("header-cart-items");
@@ -1102,9 +1103,8 @@ function updateHeaderCart() {
         const price = document.createElement("strong");
         price.textContent = "₹" + (item.price * item.quantity);
 
-        row.append(details, price);
-
         const controls = document.createElement("div");
+        controls.className = "cart-item-controls";
 
         const minus = document.createElement("button");
         minus.type = "button";
@@ -1116,10 +1116,34 @@ function updateHeaderCart() {
         plus.textContent = "+";
         plus.onclick = () => changeCartQuantity(index, 1);
 
-        controls.append(minus, plus);
-        row.appendChild(controls);
+        const remove = document.createElement("button");
+        remove.type = "button";
+        remove.textContent = "Remove";
+        remove.className = "cart-remove-button";
+        remove.onclick = () => removeCartItem(index);
+
+        controls.append(minus, plus, remove);
+        row.append(details, price, controls);
+
         itemsContainer.appendChild(row);
     });
+}
+
+function removeCartItem(index) {
+    harovaCart.splice(index, 1);
+    updateHeaderCart();
+}
+
+function changeCartQuantity(index, change) {
+    if (!harovaCart[index]) return;
+
+    harovaCart[index].quantity += change;
+
+    if (harovaCart[index].quantity <= 0) {
+        harovaCart.splice(index, 1);
+    }
+
+    updateHeaderCart();
 }
     
 // Checkout will be connected in the next step.

@@ -82,6 +82,9 @@ button {
     align-items: center;
     justify-content: space-between;
     gap: 30px;
+   
+    position: relative;
+    overflow: visible;
 }
 
 .brand {

@@ -314,19 +314,24 @@
 
     <div class="products-grid">
         
-<!-- PRODUCTS SECTION HEADING -->
+<!-- PRODUCTS SECTION -->
+<section id="products" class="products-section">
 
-<div class="products-heading">
-    <p class="section-eyebrow">THE HAROVA COLLECTION</p>
+    <!-- PRODUCTS SECTION HEADING -->
+    <div class="products-heading">
+        <p class="section-eyebrow">THE HAROVA COLLECTION</p>
 
-    <h2>Discover Our Flavours</h2>
+        <h2>Discover Our Flavours</h2>
 
-    <p class="section-subtitle">
-        Crafted with quality ingredients. Made for everyday wellbeing.
-    </p>
+        <p class="section-subtitle">
+            Crafted with quality ingredients. Made for everyday wellbeing.
+        </p>
 
-    <div class="heading-divider"></div>
-</div>
+        <div class="heading-divider"></div>
+    </div>
+
+    <!-- FOUR PRODUCT CARDS -->
+    <div class="products-grid">
 
 
 <!-- CREAMY -->
@@ -542,65 +547,64 @@
 
 
   
-<!-- CHOCOLATE CREAMY -->
+
+<!-- CHOCOLATE CRUNCHY -->
 
 <article class="product-card">
 
     <div class="product-image">
-        <img src="choc_creamy_jar.png"
-             alt="Harova Chocolate Creamy Peanut Butter">
+        <img src="choc_crunchy_jar.png"
+             alt="Harova Chocolate Crunchy Peanut Butter">
     </div>
 
     <div class="product-content">
 
-        <p class="product-number">03</p>
+        <p class="product-number">04</p>
 
-        <h3>Chocolate Creamy</h3>
+        <h3>Chocolate Crunchy</h3>
 
         <p class="product-description">
-            Rich Cocoa &amp; Smooth
+            Cocoa with Peanut Bits
         </p>
 
         <div class="product-divider"></div>
 
-        <!-- Size Selection Buttons -->
         <div class="product-size-options">
 
             <button type="button"
                 class="size-option selected"
                 data-size="200g"
-                data-price="169"
+                data-price="179"
                 onclick="selectProductSize(this)">
                 <span>200g</span>
-                <strong>₹169</strong>
+                <strong>₹179</strong>
             </button>
 
             <button type="button"
                 class="size-option"
                 data-size="500g"
-                data-price="369"
+                data-price="389"
                 onclick="selectProductSize(this)">
                 <span>500g</span>
-                <strong>₹369</strong>
+                <strong>₹389</strong>
             </button>
 
             <button type="button"
                 class="size-option"
                 data-size="1kg"
-                data-price="599"
+                data-price="619"
                 onclick="selectProductSize(this)">
                 <span>1kg</span>
-                <strong>₹599</strong>
+                <strong>₹619</strong>
             </button>
 
         </div>
 
-        <!-- Add to Cart -->
         <button
             type="button"
             class="product-button"
             onclick="addToCart(
-                'Chocolate Creamy',
+                'Chocolate Crunchy',
                 this.closest('.product-content').querySelector('.size-option.selected').dataset.price,
                 this.closest('.product-content').querySelector('.size-option.selected').dataset.size
             )">
@@ -679,7 +683,7 @@
     </div>
 
 </section>
-</div>
+        
 
 <!-- =========================================================
      BENEFITS

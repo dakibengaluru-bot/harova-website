@@ -1148,6 +1148,169 @@ function changeCartQuantity(index, change) {
     
 // Checkout will be connected in the next step.
 
+   
+async function checkoutWithRazorpay() {
+  if (!harovaCart.length) {
+    alert("Your cart is empty.");
+    return;
+  }
+
+  const customer = {
+    name: prompt("Enter your full name:"),
+    phone: prompt("Enter your mobile number:"),
+    address: prompt("Enter your full delivery address:"),
+    city: prompt("Enter your city:"),
+    pinCode: prompt("Enter your PIN code:")
+  };
+
+  if (Object.values(customer).some(value => !value || !value.trim())) {
+    alert("Please provide all delivery details.");
+    return;
+  }
+
+  const checkoutButton = document.getElementById("header-checkout-button");
+  checkoutButton.disabled = true;
+  checkoutButton.textContent = "Please wait...";
+
+  const workerUrl =
+    "https://harova-payment-api.kidscar360.workers.dev";
+
+  try {
+    // Prepare cart items for the secure Worker.
+    const items = harovaCart.map(item => ({
+      product: item.product,
+      size: item.size,
+      quantity: item.quantity
+    }));
+
+    // Step 1: Create Razorpay order.
+    const orderResponse = await fetch(
+      workerUrl + "/create-order",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          customer,
+          items
+        })
+      }
+    );
+
+    const orderData = await orderResponse.json();
+
+    if (!orderResponse.ok || !orderData.success) {
+      throw new Error(orderData.message || "Unable to create order.");
+    }
+
+    // Step 2: Open Razorpay Checkout.
+    const options = {
+      key: orderData.keyId,
+      amount: orderData.amount,
+      currency: orderData.currency,
+      name: "HAROVA",
+      description: "Premium Peanut Butter",
+      order_id: orderData.orderId,
+
+      prefill: {
+        name: customer.name,
+        contact: customer.phone
+      },
+
+      theme: {
+        color: "#d9aa45"
+      },
+
+      handler: async function (paymentResponse) {
+        try {
+          // Step 3: Verify payment through Cloudflare Worker.
+          const verifyResponse = await fetch(
+            workerUrl + "/verify-payment",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify({
+                razorpay_order_id: paymentResponse.razorpay_order_id,
+                razorpay_payment_id: paymentResponse.razorpay_payment_id,
+                razorpay_signature: paymentResponse.razorpay_signature,
+                orderToken: orderData.orderToken
+              })
+            }
+          );
+
+          const verifyData = await verifyResponse.json();
+
+          if (!verifyResponse.ok || !verifyData.success) {
+            throw new Error(
+              verifyData.message || "Payment verification failed."
+            );
+          }
+
+          if (!verifyData.salesRecorded) {
+            alert(
+              "Payment was successful, but the order could not be recorded in Google Sheets. Please contact HAROVA support with payment ID: " +
+              paymentResponse.razorpay_payment_id
+            );
+            return;
+          }
+
+          // Step 4: Payment verified and sale recorded.
+          alert(
+            "Thank you for ordering from HAROVA!\n\n" +
+            "Your payment was successful and your order has been recorded.\n" +
+            "Order ID: " + verifyData.orderId
+          );
+
+          harovaCart = [];
+          updateHeaderCart();
+
+          document.getElementById("cart-dropdown").hidden = true;
+
+        } catch (error) {
+          alert(
+            "Payment was completed, but confirmation needs attention.\n\n" +
+            error.message +
+            "\n\nPlease contact HAROVA support."
+          );
+        } finally {
+          checkoutButton.disabled = false;
+          checkoutButton.textContent = "Proceed to Checkout";
+        }
+      },
+
+      modal: {
+        ondismiss: function () {
+          checkoutButton.disabled = false;
+          checkoutButton.textContent = "Proceed to Checkout";
+        }
+      }
+    };
+
+    const razorpay = new Razorpay(options);
+
+    razorpay.on("payment.failed", function (response) {
+      alert(
+        "Payment failed: " +
+        (response.error.description || "Please try again.")
+      );
+
+      checkoutButton.disabled = false;
+      checkoutButton.textContent = "Proceed to Checkout";
+    });
+
+    razorpay.open();
+
+  } catch (error) {
+    alert("Checkout error: " + error.message);
+
+    checkoutButton.disabled = false;
+    checkoutButton.textContent = "Proceed to Checkout";
+  }
+}
+ 
     
 </script>
 

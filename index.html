@@ -1149,12 +1149,12 @@ function changeCartQuantity(index, change) {
 // Checkout will be connected in the next step.
 
    
-async function checkoutWithRazorpay() {
+
   if (!harovaCart.length) {
     alert("Your cart is empty.");
     return;
   }
-
+const couponCode = (document.getElementById("coupon-code")?.value || "").trim().toUpperCase();
 
   const customer = {
     name: prompt("Enter your full name:"),

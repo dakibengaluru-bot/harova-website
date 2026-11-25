@@ -1139,6 +1139,28 @@ function updateHeaderCart() {
     });
 }
 
+let appliedCoupon = false;
+
+function applyCoupon() {
+    const couponInput = document.getElementById("coupon-code");
+    const message = document.getElementById("coupon-message");
+    const code = couponInput.value.trim().toUpperCase();
+
+    if (code === "HAROVA10") {
+        if (appliedCoupon) {
+            message.textContent = "Coupon already applied!";
+            return;
+        }
+
+        appliedCoupon = true;
+        message.textContent = "HAROVA10 applied successfully! 10% discount at checkout.";
+        message.style.color = "#d4af37";
+    } else {
+        message.textContent = "Invalid coupon code.";
+        message.style.color = "#ff5555";
+    }
+}
+    
 function removeCartItem(index) {
     harovaCart.splice(index, 1);
     updateHeaderCart();

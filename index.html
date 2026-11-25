@@ -1085,10 +1085,12 @@ function updateHeaderCart() {
         (sum, item) => sum + item.quantity, 0
     );
 
-    const total = harovaCart.reduce(
-        (sum, item) => sum + item.price * item.quantity, 0
-    );
+   const originalTotal = harovaCart.reduce(
+    (sum, item) => sum + item.price * item.quantity, 0
+);
 
+const total = appliedCoupon ? originalTotal * 0.90 : originalTotal;
+    
     countElement.textContent = count;
     totalElement.textContent = "₹" + total;
     checkoutButton.disabled = harovaCart.length === 0;
